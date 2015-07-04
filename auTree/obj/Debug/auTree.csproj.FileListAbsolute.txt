@@ -1,0 +1,9 @@
+c:\users\dmitriy\documents\visual studio 2013\Projects\auTree\auTree\bin\Debug\auTree.exe.config
+c:\users\dmitriy\documents\visual studio 2013\Projects\auTree\auTree\obj\Debug\auTree.csprojResolveAssemblyReference.cache
+c:\users\dmitriy\documents\visual studio 2013\Projects\auTree\auTree\obj\Debug\auTree.Form1.resources
+c:\users\dmitriy\documents\visual studio 2013\Projects\auTree\auTree\obj\Debug\auTree.Properties.Resources.resources
+c:\users\dmitriy\documents\visual studio 2013\Projects\auTree\auTree\obj\Debug\auTree.csproj.GenerateResource.Cache
+c:\users\dmitriy\documents\visual studio 2013\Projects\auTree\auTree\bin\Debug\auTree.exe
+c:\users\dmitriy\documents\visual studio 2013\Projects\auTree\auTree\bin\Debug\auTree.pdb
+c:\users\dmitriy\documents\visual studio 2013\Projects\auTree\auTree\obj\Debug\auTree.exe
+c:\users\dmitriy\documents\visual studio 2013\Projects\auTree\auTree\obj\Debug\auTree.pdb
