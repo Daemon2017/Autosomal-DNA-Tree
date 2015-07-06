@@ -147,7 +147,6 @@ namespace auTree
             relative[relativeNum].Size = new System.Drawing.Size(100, 50);
             relative[relativeNum].Text = "Child " + kit.ToString(); ;
             relative[relativeNum].BackColor = Color.White;
-            relative[relativeNum].Visible = true;
             this.Controls.Add(relative[relativeNum]);
         }
 
@@ -156,7 +155,7 @@ namespace auTree
         void drawSelf(double kit)
         {
             person = new Label();
-            person.Location = new Point(450, 400);
+            person.Location = new Point(550, 500);
             person.Name = "Self";
             person.Size = new System.Drawing.Size(100, 50);
             person.Text = "Self " + kit.ToString();
@@ -173,241 +172,310 @@ namespace auTree
             relative[relativeNum].Size = new System.Drawing.Size(100, 50);
             relative[relativeNum].Text = "Brother " + kit.ToString();
             relative[relativeNum].BackColor = Color.White;
-            relative[relativeNum].Visible = true;
             this.Controls.Add(relative[relativeNum]);
         }
 
         void draw1stCousin(double kit)
         {
+            drawLineDown(-1, 0);
+
             relative[relativeNum] = new Label();
             relative[relativeNum].Location = new Point(person.Location.X - 25 - shiftH, person.Location.Y);
             relative[relativeNum].Name = "1stCousin";
             relative[relativeNum].Size = new System.Drawing.Size(100, 50);
             relative[relativeNum].Text = "1st Cousin " + kit.ToString();
             relative[relativeNum].BackColor = Color.White;
-            relative[relativeNum].Visible = true;
             this.Controls.Add(relative[relativeNum]);
         }
 
         void draw2ndCousin(double kit)
         {
+            drawLineDown(2, 0);
+
             relative[relativeNum] = new Label();
             relative[relativeNum].Location = new Point(person.Location.X + 2 * (25 + shiftH), person.Location.Y);
             relative[relativeNum].Name = "2ndCousin";
             relative[relativeNum].Size = new System.Drawing.Size(100, 50);
             relative[relativeNum].Text = "2nd Cousin " + kit.ToString();
             relative[relativeNum].BackColor = Color.White;
-            relative[relativeNum].Visible = true;
             this.Controls.Add(relative[relativeNum]);
         }
 
         void draw3rdCousin(double kit)
         {
+            drawLineDown(-2, 0);
+
             relative[relativeNum] = new Label();
             relative[relativeNum].Location = new Point(person.Location.X - 2 * (25 + shiftH), person.Location.Y);
             relative[relativeNum].Name = "3rdCousin";
             relative[relativeNum].Size = new System.Drawing.Size(100, 50);
             relative[relativeNum].Text = "3rd Cousin " + kit.ToString();
             relative[relativeNum].BackColor = Color.White;
-            relative[relativeNum].Visible = true;
             this.Controls.Add(relative[relativeNum]);
         }
 
         void draw4thCousin(double kit)
         {
+            drawLineDown(3, 0);
+
             relative[relativeNum] = new Label();
             relative[relativeNum].Location = new Point(person.Location.X + 3 * (25 + shiftH), person.Location.Y);
             relative[relativeNum].Name = "4thCousin";
             relative[relativeNum].Size = new System.Drawing.Size(100, 50);
             relative[relativeNum].Text = "4th Cousin " + kit.ToString();
             relative[relativeNum].BackColor = Color.White;
-            relative[relativeNum].Visible = true;
             this.Controls.Add(relative[relativeNum]);
         }
 
         //Поколение -1
         void drawFather(double kit)
         {
+            drawLineUp(0, -1);
+
             relative[relativeNum] = new Label();
             relative[relativeNum].Location = new Point(person.Location.X, person.Location.Y - 25 - shiftV);
-            relative[relativeNum].Name = "Father";
+            relative[relativeNum].Name = "Father" + kit.ToString();
             relative[relativeNum].Size = new System.Drawing.Size(100, 50);
             relative[relativeNum].Text = "Father " + kit.ToString();
             relative[relativeNum].BackColor = Color.White;
-            relative[relativeNum].Visible = true;
             this.Controls.Add(relative[relativeNum]);
         }
 
         void drawUncle(double kit)
         {
+            drawLineGFtoU();
+
             relative[relativeNum] = new Label();
             relative[relativeNum].Location = new Point(person.Location.X - 25 - shiftH, person.Location.Y - 25 - shiftV);
             relative[relativeNum].Name = "Uncle";
             relative[relativeNum].Size = new System.Drawing.Size(100, 50);
             relative[relativeNum].Text = "Uncle " + kit.ToString();
             relative[relativeNum].BackColor = Color.White;
-            relative[relativeNum].Visible = true;
             this.Controls.Add(relative[relativeNum]);
         }
 
         void draw1stCousin1R(double kit)
         {
+            drawLineDown(2, -1);
+
             relative[relativeNum] = new Label();
             relative[relativeNum].Location = new Point(person.Location.X + 2 * (25 + shiftH), person.Location.Y - 25 - shiftV);
             relative[relativeNum].Name = "1stCousin1R";
             relative[relativeNum].Size = new System.Drawing.Size(100, 50);
             relative[relativeNum].Text = "1st Cousin 1R " + kit.ToString();
             relative[relativeNum].BackColor = Color.White;
-            relative[relativeNum].Visible = true;
             this.Controls.Add(relative[relativeNum]);
         }
 
         void draw2ndCousin1R(double kit)
         {
+            drawLineDown(-2, -1);
+
             relative[relativeNum] = new Label();
             relative[relativeNum].Location = new Point(person.Location.X - 2 * (25 + shiftH), person.Location.Y - 25 - shiftV);
             relative[relativeNum].Name = "2ndCousin1R";
             relative[relativeNum].Size = new System.Drawing.Size(100, 50);
             relative[relativeNum].Text = "2nd Cousin 1R " + kit.ToString();
             relative[relativeNum].BackColor = Color.White;
-            relative[relativeNum].Visible = true;
             this.Controls.Add(relative[relativeNum]);
         }
 
         void draw3rdCousin1R(double kit)
         {
+            drawLineDown(3, -1);
+
             relative[relativeNum] = new Label();
             relative[relativeNum].Location = new Point(person.Location.X + 3 * (25 + shiftH), person.Location.Y - 25 - shiftV);
             relative[relativeNum].Name = "3rdCousin1R";
             relative[relativeNum].Size = new System.Drawing.Size(100, 50);
             relative[relativeNum].Text = "3rd Cousin 1R " + kit.ToString();
             relative[relativeNum].BackColor = Color.White;
-            relative[relativeNum].Visible = true;
             this.Controls.Add(relative[relativeNum]);
         }
 
         //Поколение -2
         void drawGrandfather(double kit)
         {
+            drawLineUp(0, -2);
+
             relative[relativeNum] = new Label();
             relative[relativeNum].Location = new Point(person.Location.X, person.Location.Y - 2 * (25 + shiftV));
             relative[relativeNum].Name = "Grandfather";
             relative[relativeNum].Size = new System.Drawing.Size(100, 50);
             relative[relativeNum].Text = "Grandfather " + kit.ToString();
             relative[relativeNum].BackColor = Color.White;
-            relative[relativeNum].Visible = true;
             this.Controls.Add(relative[relativeNum]);
         }
 
         void drawGranduncle(double kit)
         {
+            drawLineGGFtoGU();
+
             relative[relativeNum] = new Label();
             relative[relativeNum].Location = new Point(person.Location.X + 2 * (25 + shiftH), person.Location.Y - 2 * (25 + shiftV));
             relative[relativeNum].Name = "Granduncle";
             relative[relativeNum].Size = new System.Drawing.Size(100, 50);
             relative[relativeNum].Text = "Grand uncle " + kit.ToString();
             relative[relativeNum].BackColor = Color.White;
-            relative[relativeNum].Visible = true;
             this.Controls.Add(relative[relativeNum]);
         }
 
         void draw1stCousin2R(double kit)
         {
+            drawLineDown(-2, -2);
+
             relative[relativeNum] = new Label();
             relative[relativeNum].Location = new Point(person.Location.X - 2 * (25 + shiftH), person.Location.Y - 2 * (25 + shiftV));
             relative[relativeNum].Name = "1stCousin2R";
             relative[relativeNum].Size = new System.Drawing.Size(100, 50);
             relative[relativeNum].Text = "1st Cousin 2R " + kit.ToString();
             relative[relativeNum].BackColor = Color.White;
-            relative[relativeNum].Visible = true;
             this.Controls.Add(relative[relativeNum]);
         }
 
         void draw2ndCousin2R(double kit)
         {
+            drawLineDown(3, -2);
+
             relative[relativeNum] = new Label();
             relative[relativeNum].Location = new Point(person.Location.X + 3 * (25 + shiftH), person.Location.Y - 2 * (25 + shiftV));
             relative[relativeNum].Name = "2ndCousin2R";
             relative[relativeNum].Size = new System.Drawing.Size(100, 50);
             relative[relativeNum].Text = "2nd Cousin 2R " + kit.ToString();
             relative[relativeNum].BackColor = Color.White;
-            relative[relativeNum].Visible = true;
             this.Controls.Add(relative[relativeNum]);
         }
 
         //Поколение -3
         void drawGreatgrandfather(double kit)
         {
+            drawLineUp(0, -3);
+
             relative[relativeNum] = new Label();
             relative[relativeNum].Location = new Point(person.Location.X, person.Location.Y - 3 * (25 + shiftV));
             relative[relativeNum].Name = "Greatgrandfather";
             relative[relativeNum].Size = new System.Drawing.Size(100, 50);
             relative[relativeNum].Text = "Great grandfather " + kit.ToString();
             relative[relativeNum].BackColor = Color.White;
-            relative[relativeNum].Visible = true;
             this.Controls.Add(relative[relativeNum]);
         }
 
         void drawGreatgranduncle(double kit)
         {
+            drawLineGGGFtoGGU();
+
             relative[relativeNum] = new Label();
             relative[relativeNum].Location = new Point(person.Location.X - 2 * (25 + shiftH), person.Location.Y - 3 * (25 + shiftV));
             relative[relativeNum].Name = "Greatgranduncle";
             relative[relativeNum].Size = new System.Drawing.Size(100, 50);
             relative[relativeNum].Text = "Great grand uncle " + kit.ToString();
             relative[relativeNum].BackColor = Color.White;
-            relative[relativeNum].Visible = true;
             this.Controls.Add(relative[relativeNum]);
         }
 
         void draw1stCousin3R(double kit)
         {
+            drawLineDown(3, -3);
+
             relative[relativeNum] = new Label();
             relative[relativeNum].Location = new Point(person.Location.X + 3 * (25 + shiftH), person.Location.Y - 3 * (25 + shiftV));
             relative[relativeNum].Name = "1stCousin3R";
             relative[relativeNum].Size = new System.Drawing.Size(100, 50);
             relative[relativeNum].Text = "1st Cousin 3R " + kit.ToString();
             relative[relativeNum].BackColor = Color.White;
-            relative[relativeNum].Visible = true;
             this.Controls.Add(relative[relativeNum]);
         }
 
         //Поколение -4
         void drawGreatgreatgrandfather(double kit)
         {
+            drawLineUp(0, -4);
+
             relative[relativeNum] = new Label();
             relative[relativeNum].Location = new Point(person.Location.X, person.Location.Y - 4 * (25 + shiftV));
             relative[relativeNum].Name = "Greatgreatgrandfather";
             relative[relativeNum].Size = new System.Drawing.Size(100, 50);
             relative[relativeNum].Text = "Great-great-grandfather " + kit.ToString();
             relative[relativeNum].BackColor = Color.White;
-            relative[relativeNum].Visible = true;
             this.Controls.Add(relative[relativeNum]);
         }
 
         void drawGreatgreatgranduncle(double kit)
         {
+            drawLineDown(3, -4);
+
             relative[relativeNum] = new Label();
             relative[relativeNum].Location = new Point(person.Location.X + 3 * (25 + shiftH), person.Location.Y - 4 * (25 + shiftV));
             relative[relativeNum].Name = "Greatgreatgranduncle";
             relative[relativeNum].Size = new System.Drawing.Size(100, 50);
             relative[relativeNum].Text = "Great-great-grand-uncle " + kit.ToString();
             relative[relativeNum].BackColor = Color.White;
-            relative[relativeNum].Visible = true;
             this.Controls.Add(relative[relativeNum]);
         }
 
         //Поколение -5
         void drawGreatgreatgreatgrandfather(double kit)
         {
+            drawLineUp(0, -5);
+
             relative[relativeNum] = new Label();
             relative[relativeNum].Location = new Point(person.Location.X, person.Location.Y - 5 * (25 + shiftV));
             relative[relativeNum].Name = "Greatgreatgreatgrandfather";
             relative[relativeNum].Size = new System.Drawing.Size(100, 50);
             relative[relativeNum].Text = "Great-great-great-grandfather " + kit.ToString();
             relative[relativeNum].BackColor = Color.White;
-            relative[relativeNum].Visible = true;
             this.Controls.Add(relative[relativeNum]);
+        }
+
+        //Соединительные линии
+        void drawLineGGGGFtoGGGU()
+        {
+
+        }
+
+        void drawLineGGGFtoGGU()
+        {
+            System.Drawing.Pen myPen;
+            myPen = new System.Drawing.Pen(System.Drawing.Color.Black);
+            System.Drawing.Graphics Form1 = this.CreateGraphics();
+            Form1.DrawLine(myPen, person.Location.X + 50, person.Location.Y - 4 * (25 + shiftV) + 50, person.Location.X - 2 * (25 + shiftH) + 50, person.Location.Y - 3 * (25 + shiftV));
+        }
+
+        void drawLineGGFtoGU()
+        {
+            System.Drawing.Pen myPen;
+            myPen = new System.Drawing.Pen(System.Drawing.Color.Black);
+            System.Drawing.Graphics Form1 = this.CreateGraphics();
+            Form1.DrawLine(myPen, person.Location.X + 50, person.Location.Y - 3 * (25 + shiftV) + 50, person.Location.X + 2 * (25 + shiftH) + 50, person.Location.Y - 2 * (25 + shiftV));
+        }
+
+        void drawLineGFtoU()
+        {
+            System.Drawing.Pen myPen;
+            myPen = new System.Drawing.Pen(System.Drawing.Color.Black);
+            System.Drawing.Graphics Form1 = this.CreateGraphics();
+            Form1.DrawLine(myPen, person.Location.X + 50, person.Location.Y - 2 * (25 + shiftV) + 50, person.Location.X - 1 * (25 + shiftH), person.Location.Y - 1 * (25 + shiftV));
+        }
+
+        void drawLineFtoGB()
+        {
+
+        }
+
+        void drawLineUp(int x, int y)
+        {
+            System.Drawing.Pen myPen;
+            myPen = new System.Drawing.Pen(System.Drawing.Color.Black);
+            System.Drawing.Graphics Form1 = this.CreateGraphics();
+            Form1.DrawLine(myPen, person.Location.X + 50 + x * (25 + shiftH), person.Location.Y + y * (25 + shiftV), person.Location.X + 50 + x * (25 + shiftH), person.Location.Y + (y + 1) * (25 + shiftV));
+        }
+
+        void drawLineDown(int x, int y)
+        {
+            System.Drawing.Pen myPen;
+            myPen = new System.Drawing.Pen(System.Drawing.Color.Black);
+            System.Drawing.Graphics Form1 = this.CreateGraphics();
+            Form1.DrawLine(myPen, person.Location.X + 50 + x * (25 + shiftH), person.Location.Y + y * (25 + shiftV), person.Location.X + 50 + x * (25 + shiftH), person.Location.Y + (y - 1) * (25 + shiftV));
         }
     }
 }

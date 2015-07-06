@@ -45,10 +45,15 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(984, 451);
+            this.AutoSize = true;
+            this.ClientSize = new System.Drawing.Size(1184, 661);
             this.Controls.Add(this.button1);
+            this.MaximizeBox = false;
+            this.MaximumSize = new System.Drawing.Size(1200, 700);
+            this.MinimizeBox = false;
+            this.MinimumSize = new System.Drawing.Size(1200, 700);
             this.Name = "Form1";
-            this.Text = "Form1";
+            this.Text = "auTree";
             this.ResumeLayout(false);
 
         }
