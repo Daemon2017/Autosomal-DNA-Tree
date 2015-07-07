@@ -17,6 +17,8 @@ namespace auTree
         public Label[] relative;
         int relativeNum = 0;
 
+        int selfNum = 0;
+
         int shiftW = 50;
         int shiftH = 100;
 
@@ -55,10 +57,21 @@ namespace auTree
             relative = new Label[127];
         }
 
-        private void toolStripMenuItem1_Click(object sender, EventArgs e)
+        private void exitToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            Application.Exit();
+        }
+
+        private void startToolStripMenuItem_Click(object sender, EventArgs e)
         {
             centralPersonBuild(); //Помещаем персону из ячейки 0;0
             relationsBuild(); //Помещаем персоны из ячеек 0;j
+        }
+
+        private void relationsOptionsToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            RelationsOptions RO = new RelationsOptions();
+            RO.Show();
         }
     }
 }

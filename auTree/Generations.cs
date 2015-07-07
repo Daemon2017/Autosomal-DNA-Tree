@@ -31,7 +31,7 @@ namespace auTree
             person.Location = new Point(550, 500);
             person.Name = "Self";
             person.Size = new System.Drawing.Size(containerWidth, containerHeight);
-            person.Text = "Self \n" + kit.ToString();
+            person.Text = "Self \n" + kitNumb[selfNum].ToString();
             person.BackColor = Color.White;
             person.Visible = true;
             this.Controls.Add(person);
@@ -188,7 +188,7 @@ namespace auTree
             relative[relativeNum].Location = new Point(person.Location.X + 2 * (25 + shiftH), person.Location.Y - 2 * (25 + shiftW));
             relative[relativeNum].Name = "Granduncle";
             relative[relativeNum].Size = new System.Drawing.Size(containerWidth, containerHeight);
-            relative[relativeNum].Text = "Grand uncle \n" + kit.ToString();
+            relative[relativeNum].Text = "Grand-uncle \n" + kit.ToString();
             relative[relativeNum].BackColor = Color.White;
             this.Controls.Add(relative[relativeNum]);
         }
@@ -228,7 +228,7 @@ namespace auTree
             relative[relativeNum].Location = new Point(person.Location.X, person.Location.Y - 3 * (25 + shiftW));
             relative[relativeNum].Name = "Greatgrandfather";
             relative[relativeNum].Size = new System.Drawing.Size(containerWidth, containerHeight);
-            relative[relativeNum].Text = "Great grandfather \n" + kit.ToString();
+            relative[relativeNum].Text = "Great-grandfather \n" + kit.ToString();
             relative[relativeNum].BackColor = Color.White;
             this.Controls.Add(relative[relativeNum]);
         }
@@ -241,7 +241,7 @@ namespace auTree
             relative[relativeNum].Location = new Point(person.Location.X - 2 * (25 + shiftH), person.Location.Y - 3 * (25 + shiftW));
             relative[relativeNum].Name = "Greatgranduncle";
             relative[relativeNum].Size = new System.Drawing.Size(containerWidth, containerHeight);
-            relative[relativeNum].Text = "Great grand uncle " + kit.ToString();
+            relative[relativeNum].Text = "Great-grand-uncle " + kit.ToString();
             relative[relativeNum].BackColor = Color.White;
             this.Controls.Add(relative[relativeNum]);
         }

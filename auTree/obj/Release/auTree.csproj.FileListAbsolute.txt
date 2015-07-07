@@ -6,3 +6,5 @@ C:\Users\Dmitriy\Documents\Visual Studio 2013\Projects\auTree\auTree\obj\Release
 C:\Users\Dmitriy\Documents\Visual Studio 2013\Projects\auTree\auTree\obj\Release\auTree.csproj.GenerateResource.Cache
 C:\Users\Dmitriy\Documents\Visual Studio 2013\Projects\auTree\auTree\obj\Release\auTree.exe
 C:\Users\Dmitriy\Documents\Visual Studio 2013\Projects\auTree\auTree\obj\Release\auTree.pdb
+C:\Users\Dmitriy\Documents\Visual Studio 2013\Projects\auTree\auTree\obj\Release\auTree.csprojResolveAssemblyReference.cache
+C:\Users\Dmitriy\Documents\Visual Studio 2013\Projects\auTree\auTree\obj\Release\auTree.RelationsOptions.resources

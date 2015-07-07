@@ -20,7 +20,7 @@ namespace auTree
 
             for (int i = 0; i < genDist.GetLength(0); i++)
             {
-                double compare = genDist[0, i] - genDist[j, i];
+                double compare = genDist[selfNum, i] - genDist[j, i];
 
                 if (compare > 0)
                 {
