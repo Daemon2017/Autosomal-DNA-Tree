@@ -6,7 +6,7 @@ using System.Windows.Forms;
 
 namespace auTree
 {
-    static class Program
+    static partial class Program
     {
         /// <summary>
         /// Главная точка входа для приложения.
