@@ -13,10 +13,9 @@ namespace auTree
     public partial class Form1 : Form
     {
         public Label person;
-
         public Label[] relative;
-        int relativeNum = 0;
 
+        int relativeNum = 0;
         int selfNum = 0;
 
         int shiftW = 50;

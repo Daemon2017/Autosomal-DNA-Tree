@@ -12,6 +12,18 @@ namespace auTree
 {
     public partial class Form1
     {
+        void FrontOrBack(double kit)
+        {
+            if (kit != 0)
+            {
+                relative[relativeNum].BringToFront();
+            }
+            else
+            {
+                relative[relativeNum].SendToBack();
+            }
+        }
+
         //Поколение +1
         void drawChild(double kit)
         {
@@ -22,6 +34,8 @@ namespace auTree
             relative[relativeNum].Text = "Child \n" + kit.ToString(); ;
             relative[relativeNum].BackColor = Color.White;
             this.Controls.Add(relative[relativeNum]);
+
+            FrontOrBack(kit);
         }
 
         //Поколение 0
@@ -46,6 +60,8 @@ namespace auTree
             relative[relativeNum].Text = "Brother \n" + kit.ToString();
             relative[relativeNum].BackColor = Color.White;
             this.Controls.Add(relative[relativeNum]);
+
+            FrontOrBack(kit);
         }
 
         void draw1stCousin(double kit)
@@ -59,6 +75,8 @@ namespace auTree
             relative[relativeNum].Text = "1st Cousin \n" + kit.ToString();
             relative[relativeNum].BackColor = Color.White;
             this.Controls.Add(relative[relativeNum]);
+
+            FrontOrBack(kit);
         }
 
         void draw2ndCousin(double kit)
@@ -72,6 +90,8 @@ namespace auTree
             relative[relativeNum].Text = "2nd Cousin \n" + kit.ToString();
             relative[relativeNum].BackColor = Color.White;
             this.Controls.Add(relative[relativeNum]);
+
+            FrontOrBack(kit);
         }
 
         void draw3rdCousin(double kit)
@@ -85,6 +105,8 @@ namespace auTree
             relative[relativeNum].Text = "3rd Cousin \n" + kit.ToString();
             relative[relativeNum].BackColor = Color.White;
             this.Controls.Add(relative[relativeNum]);
+
+            FrontOrBack(kit);
         }
 
         void draw4thCousin(double kit)
@@ -98,6 +120,8 @@ namespace auTree
             relative[relativeNum].Text = "4th Cousin \n" + kit.ToString();
             relative[relativeNum].BackColor = Color.White;
             this.Controls.Add(relative[relativeNum]);
+
+            FrontOrBack(kit);
         }
 
         //Поколение -1
@@ -112,6 +136,8 @@ namespace auTree
             relative[relativeNum].Text = "Father \n" + kit.ToString();
             relative[relativeNum].BackColor = Color.White;
             this.Controls.Add(relative[relativeNum]);
+
+            FrontOrBack(kit);
         }
 
         void drawUncle(double kit)
@@ -125,6 +151,8 @@ namespace auTree
             relative[relativeNum].Text = "Uncle \n" + kit.ToString();
             relative[relativeNum].BackColor = Color.White;
             this.Controls.Add(relative[relativeNum]);
+
+            FrontOrBack(kit);
         }
 
         void draw1stCousin1R(double kit)
@@ -138,6 +166,8 @@ namespace auTree
             relative[relativeNum].Text = "1st Cousin 1R \n" + kit.ToString();
             relative[relativeNum].BackColor = Color.White;
             this.Controls.Add(relative[relativeNum]);
+
+            FrontOrBack(kit);
         }
 
         void draw2ndCousin1R(double kit)
@@ -151,6 +181,8 @@ namespace auTree
             relative[relativeNum].Text = "2nd Cousin 1R \n" + kit.ToString();
             relative[relativeNum].BackColor = Color.White;
             this.Controls.Add(relative[relativeNum]);
+
+            FrontOrBack(kit);
         }
 
         void draw3rdCousin1R(double kit)
@@ -164,6 +196,8 @@ namespace auTree
             relative[relativeNum].Text = "3rd Cousin 1R \n" + kit.ToString();
             relative[relativeNum].BackColor = Color.White;
             this.Controls.Add(relative[relativeNum]);
+
+            FrontOrBack(kit);
         }
 
         //Поколение -2
@@ -178,6 +212,8 @@ namespace auTree
             relative[relativeNum].Text = "Grandfather \n" + kit.ToString();
             relative[relativeNum].BackColor = Color.White;
             this.Controls.Add(relative[relativeNum]);
+
+            FrontOrBack(kit);
         }
 
         void drawGranduncle(double kit)
@@ -191,6 +227,8 @@ namespace auTree
             relative[relativeNum].Text = "Grand-uncle \n" + kit.ToString();
             relative[relativeNum].BackColor = Color.White;
             this.Controls.Add(relative[relativeNum]);
+
+            FrontOrBack(kit);
         }
 
         void draw1stCousin2R(double kit)
@@ -204,6 +242,8 @@ namespace auTree
             relative[relativeNum].Text = "1st Cousin 2R \n" + kit.ToString();
             relative[relativeNum].BackColor = Color.White;
             this.Controls.Add(relative[relativeNum]);
+
+            FrontOrBack(kit);
         }
 
         void draw2ndCousin2R(double kit)
@@ -217,6 +257,8 @@ namespace auTree
             relative[relativeNum].Text = "2nd Cousin 2R \n" + kit.ToString();
             relative[relativeNum].BackColor = Color.White;
             this.Controls.Add(relative[relativeNum]);
+
+            FrontOrBack(kit);
         }
 
         //Поколение -3
@@ -231,6 +273,8 @@ namespace auTree
             relative[relativeNum].Text = "Great-grandfather \n" + kit.ToString();
             relative[relativeNum].BackColor = Color.White;
             this.Controls.Add(relative[relativeNum]);
+
+            FrontOrBack(kit);
         }
 
         void drawGreatgranduncle(double kit)
@@ -244,6 +288,8 @@ namespace auTree
             relative[relativeNum].Text = "Great-grand-uncle " + kit.ToString();
             relative[relativeNum].BackColor = Color.White;
             this.Controls.Add(relative[relativeNum]);
+
+            FrontOrBack(kit);
         }
 
         void draw1stCousin3R(double kit)
@@ -257,6 +303,8 @@ namespace auTree
             relative[relativeNum].Text = "1st Cousin 3R \n" + kit.ToString();
             relative[relativeNum].BackColor = Color.White;
             this.Controls.Add(relative[relativeNum]);
+
+            FrontOrBack(kit);
         }
 
         //Поколение -4
@@ -271,6 +319,8 @@ namespace auTree
             relative[relativeNum].Text = "Great-great-grandfather \n" + kit.ToString();
             relative[relativeNum].BackColor = Color.White;
             this.Controls.Add(relative[relativeNum]);
+
+            FrontOrBack(kit);
         }
 
         void drawGreatgreatgranduncle(double kit)
@@ -284,6 +334,8 @@ namespace auTree
             relative[relativeNum].Text = "Great-great-grand-uncle \n" + kit.ToString();
             relative[relativeNum].BackColor = Color.White;
             this.Controls.Add(relative[relativeNum]);
+
+            FrontOrBack(kit);
         }
 
         //Поколение -5
@@ -298,6 +350,8 @@ namespace auTree
             relative[relativeNum].Text = "Great-great-great-grandfather \n" + kit.ToString();
             relative[relativeNum].BackColor = Color.White;
             this.Controls.Add(relative[relativeNum]);
+
+            FrontOrBack(kit);
         }
     }
 }

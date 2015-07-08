@@ -36,7 +36,7 @@ namespace auTree
             for (int j = 0; j < genDist.GetLength(0); j++)
             {
                 //Поколение 0
-                if (genDist[selfNum, j] == 3.6)
+                if (genDist[selfNum, j] >= num[3, 0] && genDist[selfNum, j] <= num[3, 1])
                 {
                     drawFather(0);
                     drawGrandfather(0);
@@ -49,19 +49,19 @@ namespace auTree
                 }
 
                 //Поколение -1
-                if (genDist[selfNum, j] == num[6, 0] )
+                if (genDist[selfNum, j] >= num[5, 0] && genDist[selfNum, j] <= num[5, 1])
                 {
                     ChildOrParent(j);
                 }
 
-                if (genDist[selfNum, j] == 1.6)
+                if (genDist[selfNum, j] >= num[6, 0] && genDist[selfNum, j] <= num[6, 1])
                 {
                     drawFather(0);
                     drawGrandfather(0);
                     drawUncle(kitNumb[j]);
                 }
 
-                if (genDist[selfNum, j] == 3.8)
+                if (genDist[selfNum, j] >= num[8, 0] && genDist[selfNum, j] <= num[8, 1])
                 {
                     drawFather(0);
                     drawGrandfather(0);
@@ -73,21 +73,20 @@ namespace auTree
                 }
 
                 //Поколение -2
-                if ((genDist[selfNum, j] == 1.7) || (genDist[selfNum, j] == 1.5))
+                if (genDist[selfNum, j] >= num[10, 0] && genDist[selfNum, j] <= num[10, 1])
                 {
                     drawFather(0);
                     drawGrandfather(kitNumb[j]);
                 }
 
-                if (genDist[selfNum, j] == 2.2)
+                if (genDist[selfNum, j] >= num[11, 0] && genDist[selfNum, j] <= num[11, 1])
                 {
                     drawFather(0);
                     drawGrandfather(0);
                     drawGreatgrandfather(0);
                     drawGranduncle(kitNumb[j]);
                 }
-
-
+                
                 if (genDist[selfNum, j] == 3.1)
                 {
                     drawFather(0);
