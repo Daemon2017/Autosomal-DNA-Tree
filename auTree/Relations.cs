@@ -21,7 +21,7 @@ namespace auTree
         {
             for (int j = 0; j < genDist.GetLength(0); j++)
             {
-                if (genDist[selfNum, j] == 1)
+                if (genDist[selfNum, j] >= 1 && genDist[selfNum, j] <= 1)
                 {
                     ChildOrParent(j);
                 }

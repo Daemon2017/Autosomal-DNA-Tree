@@ -42,6 +42,7 @@ namespace auTree
 
             loadMatrix();
         }
+
         private void button1_Click(object sender, EventArgs e)
         {
             for (int j = 0; j < 5; j++)
@@ -276,6 +277,7 @@ namespace auTree
                 this.Controls.Add(maxP1[i]);
             }
         }
+
         void saveMatrix()
         {
             using (StreamWriter gg = new StreamWriter(@"RelationsOptions.cfg"))
