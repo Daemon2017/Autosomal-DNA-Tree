@@ -95,64 +95,65 @@ namespace auTree
         void loadMatrix()
         {
             string[] lines = File.ReadAllLines("RelationsOptions.cfg");
-            string[,] num = new string[lines.Length, lines[0].Split(' ').Length];
+            double[,] relationsData = new double[lines.Length, lines[0].Split(' ').Length];
 
             for (int i = 0; i < lines.Length; i++)
             {
                 string[] temp = lines[i].Split(' ');
+
                 for (int j = 0; j < temp.Length; j++)
                 {
-                    num[i, j] = temp[j];
+                    if (Double.TryParse(temp[j], out relationsData[i, j])) ;
                 }
             }
 
             //Поколение 0
             for (int j = 0; j < 5; j++)
             {
-                min0[j].Text = num[j, 0];
-                max0[j].Text = num[j, 1];
+                min0[j].Text = relationsData[j, 0].ToString();
+                max0[j].Text = relationsData[j, 1].ToString();
             }
 
             //Поколение -1
             for (int j = 5; j < 10; j++)
             {
-                minM1[j-5].Text = num[j, 0];
-                maxM1[j-5].Text = num[j, 1];
+                minM1[j - 5].Text = relationsData[j, 0].ToString();
+                maxM1[j - 5].Text = relationsData[j, 1].ToString();
             }
 
             //Поколение -2
             for (int j = 10; j < 14; j++)
             {
-                minM2[j - 10].Text = num[j, 0];
-                maxM2[j - 10].Text = num[j, 1];
+                minM2[j - 10].Text = relationsData[j, 0].ToString();
+                maxM2[j - 10].Text = relationsData[j, 1].ToString();
             }
 
             //Поколение -3
             for (int j = 14; j < 17; j++)
             {
-                minM3[j - 14].Text = num[j, 0];
-                maxM3[j - 14].Text = num[j, 1];
+                minM3[j - 14].Text = relationsData[j, 0].ToString();
+                maxM3[j - 14].Text = relationsData[j, 1].ToString();
             }
 
             //Поколение -4
             for (int j = 17; j < 19; j++)
             {
-                minM4[j - 17].Text = num[j, 0];
-                maxM4[j - 17].Text = num[j, 1];
+                minM4[j - 17].Text = relationsData[j, 0].ToString();
+                maxM4[j - 17].Text = relationsData[j, 1].ToString();
             }
 
             //Поколение -5
             for (int j = 19; j < 20; j++)
             {
-                minM5[j - 19].Text = num[j, 0];
-                maxM5[j - 19].Text = num[j, 1];
+                minM5[j - 19].Text = relationsData[j, 0].ToString();
+                maxM5[j - 19].Text = relationsData[j, 1].ToString();
             }
 
             //Поколение -6
             for (int j = 20; j < 21; j++)
             {
-                minP1[j - 20].Text = num[j, 0];
-                maxP1[j - 20].Text = num[j, 1];
+                minP1[j - 20].Text = relationsData[j, 0].ToString();
+                maxP1[j - 20].Text = relationsData[j, 1].ToString();
             }
         }
 

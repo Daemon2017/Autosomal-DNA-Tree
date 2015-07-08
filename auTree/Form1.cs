@@ -7,7 +7,6 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
-using System.IO;
 
 namespace auTree
 {
@@ -26,9 +25,6 @@ namespace auTree
         int containerWidth = 100;
         int containerHeight = 50;
 
-        string[] lines;
-        string[,] num;
-       
         double[,] genDist = 
         {
             {0,   1,   1.7, 1.6, 2.2, 3.1, 3.6, 3.8, 6.4},
@@ -69,8 +65,6 @@ namespace auTree
 
         private void startToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            loadMatrix();
-
             centralPersonBuild(); //Помещаем персону из ячейки 0;0
 
             relationsBuild(); //Помещаем персоны из ячеек 0;j
@@ -80,22 +74,6 @@ namespace auTree
         {
             RelationsOptions RO = new RelationsOptions();
             RO.Show();
-        }
-
-        void loadMatrix()
-        {
-            string[] lines = File.ReadAllLines("RelationsOptions.cfg");
-            string[,] num = new string[lines.Length, lines[0].Split(' ').Length];
-
-            for (int i = 0; i < lines.Length; i++)
-            {
-                string[] temp = lines[i].Split(' ');
-
-                for (int j = 0; j < temp.Length; j++)
-                {
-                    num[i, j] = temp[j];
-                }
-            }
         }
     }
 }
