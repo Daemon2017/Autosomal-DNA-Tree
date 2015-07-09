@@ -13,19 +13,8 @@ namespace auTree
 {
     public partial class Form1
     {
-         double[] kitNumb = 
-         {
-             236530,
-             253745,
-             257060,
-             236539,
-             213524,
-             261987,
-             261985,
-             260621,
-             222811
-         };
-         
+        int[] kitNumb = new int[30];
+
         void centralPersonBuild()
         {
             drawSelf(kitNumb[0]);
@@ -33,6 +22,14 @@ namespace auTree
 
         void relationsBuild()
         {
+            //Загрузка номеров китов
+            string[] kitLines = File.ReadAllLines("KitsNumbers.txt");
+
+            for (int i = 0; i < kitLines.Length; i++)
+            {
+                if (Int32.TryParse(kitLines[i], out kitNumb[i])) ;
+            }
+
             //Загрузка матрицы родовых расстояний
             string[] genLines = File.ReadAllLines("GeneticDistances.txt");
             double[,] genDist = new double[genLines.Length, genLines[0].Split(';').Length];
@@ -79,7 +76,7 @@ namespace auTree
                 }
 
                 //Поколение -1
-                 if (genDist[selfNum, j] >= num[5, 0] && genDist[selfNum, j] <= num[5, 1])
+                if (genDist[selfNum, j] >= num[5, 0] && genDist[selfNum, j] <= num[5, 1])
                 {
                     ChildOrParent(j, genDist);
                 }
