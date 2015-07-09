@@ -93,16 +93,17 @@ namespace auTree
 
         void loadMatrix()
         {
+            //Загрузка нижних и верхних границ интервалов для каждого возможного родства
             string[] lines = File.ReadAllLines("RelationsOptions.cfg");
             string[,] relationsData = new string[lines.Length, lines[0].Split(' ').Length];
 
             for (int i = 0; i < lines.Length; i++)
             {
-                string[] temp = lines[i].Split(' ');
+                string[] tempData = lines[i].Split(' ');
 
-                for (int j = 0; j < temp.Length; j++)
+                for (int j = 0; j < tempData.Length; j++)
                 {
-                    relationsData[i, j] = temp[j];
+                    relationsData[i, j] = tempData[j];
                 }
             }
 
@@ -278,6 +279,7 @@ namespace auTree
             }
         }
 
+        //Сохранение нижних и верхних границ интервалов для каждого возможного родства
         void saveMatrix()
         {
             using (StreamWriter gg = new StreamWriter(@"RelationsOptions.cfg"))

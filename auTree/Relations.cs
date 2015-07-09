@@ -13,6 +13,32 @@ namespace auTree
 {
     public partial class Form1
     {
+         double[] kitNumb = 
+         {
+             236530,
+             253745,
+             257060,
+             236539,
+             213524,
+             261987,
+             261985,
+             260621,
+             222811
+         };
+
+         double[,] genDist = 
+        {
+            {0,   1,   1.7, 1.6, 2.2, 3.1, 3.6, 3.8, 6.4},
+            {1,   0,   1,   1.2, 1.6, 2.6, 3.2, 3.5, 5.8},
+            {1.7, 1,   0,   1,   1.2, 2,   2.8, 2.4, 3.7},
+            {1.6, 1.2, 1,   0,   1.6, 2.7, 3.4, 3,   6.2},
+            {2.2, 1.6, 1.2, 1.6, 0,   1.9, 2.9, 2.5, 3.6},
+            {3.1, 2.6, 2,   2.7, 1.9, 0,   1.5, 2.4, 3.9},
+            {3.6, 3.2, 2.8, 3.4, 2.9, 1.5, 0,   3.3, 4.3},
+            {3.8, 3.5, 2.4, 3,   2.5, 2.4, 3.3, 0,   4},
+            {6.4, 5.8, 3.7, 6.2, 3.6, 3.9, 4.3, 4,   0}
+        };
+         
         void centralPersonBuild()
         {
             drawSelf(kitNumb[0]);
@@ -20,6 +46,7 @@ namespace auTree
 
         void relationsBuild()
         {
+            //Загрузка нижних и верхних границ интервалов для каждого возможного родства
             string[] lines = File.ReadAllLines("RelationsOptions.cfg");
             double[,] num = new double[lines.Length, lines[0].Split(' ').Length];
 
@@ -32,6 +59,8 @@ namespace auTree
                     if (Double.TryParse(temp[j], out num[i, j])) ;
                 }
             }
+
+            centralPersonBuild();
 
             for (int j = 0; j < genDist.GetLength(0); j++)
             {
@@ -86,7 +115,7 @@ namespace auTree
                     drawGreatgrandfather(0);
                     drawGranduncle(kitNumb[j]);
                 }
-                
+
                 if (genDist[selfNum, j] == 3.1)
                 {
                     drawFather(0);

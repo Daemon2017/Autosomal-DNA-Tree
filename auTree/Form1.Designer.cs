@@ -31,11 +31,8 @@
             this.menuStrip1 = new System.Windows.Forms.MenuStrip();
             this.startToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.optionsToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.loadKitsToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.loadDistancesToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.relationsOptionsToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.ambiguityOptionsToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.exitToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.saveTreeJPGToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.menuStrip1.SuspendLayout();
             this.SuspendLayout();
@@ -44,9 +41,8 @@
             // 
             this.menuStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.startToolStripMenuItem,
-            this.optionsToolStripMenuItem,
             this.saveTreeJPGToolStripMenuItem,
-            this.exitToolStripMenuItem});
+            this.optionsToolStripMenuItem});
             this.menuStrip1.Location = new System.Drawing.Point(0, 0);
             this.menuStrip1.Name = "menuStrip1";
             this.menuStrip1.Size = new System.Drawing.Size(1264, 24);
@@ -63,25 +59,11 @@
             // optionsToolStripMenuItem
             // 
             this.optionsToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.loadKitsToolStripMenuItem,
-            this.loadDistancesToolStripMenuItem,
             this.relationsOptionsToolStripMenuItem,
             this.ambiguityOptionsToolStripMenuItem});
             this.optionsToolStripMenuItem.Name = "optionsToolStripMenuItem";
             this.optionsToolStripMenuItem.Size = new System.Drawing.Size(79, 20);
             this.optionsToolStripMenuItem.Text = "Настройки";
-            // 
-            // loadKitsToolStripMenuItem
-            // 
-            this.loadKitsToolStripMenuItem.Name = "loadKitsToolStripMenuItem";
-            this.loadKitsToolStripMenuItem.Size = new System.Drawing.Size(247, 22);
-            this.loadKitsToolStripMenuItem.Text = "Загрузить номера китов";
-            // 
-            // loadDistancesToolStripMenuItem
-            // 
-            this.loadDistancesToolStripMenuItem.Name = "loadDistancesToolStripMenuItem";
-            this.loadDistancesToolStripMenuItem.Size = new System.Drawing.Size(247, 22);
-            this.loadDistancesToolStripMenuItem.Text = "Загрузить матрицу расстояний";
             // 
             // relationsOptionsToolStripMenuItem
             // 
@@ -95,13 +77,6 @@
             this.ambiguityOptionsToolStripMenuItem.Name = "ambiguityOptionsToolStripMenuItem";
             this.ambiguityOptionsToolStripMenuItem.Size = new System.Drawing.Size(247, 22);
             this.ambiguityOptionsToolStripMenuItem.Text = "Настройки неопределенностей";
-            // 
-            // exitToolStripMenuItem
-            // 
-            this.exitToolStripMenuItem.Name = "exitToolStripMenuItem";
-            this.exitToolStripMenuItem.Size = new System.Drawing.Size(53, 20);
-            this.exitToolStripMenuItem.Text = "Выход";
-            this.exitToolStripMenuItem.Click += new System.EventHandler(this.exitToolStripMenuItem_Click);
             // 
             // saveTreeJPGToolStripMenuItem
             // 
@@ -129,13 +104,10 @@
         #endregion
 
         private System.Windows.Forms.MenuStrip menuStrip1;
-        private System.Windows.Forms.ToolStripMenuItem exitToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem optionsToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem startToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem relationsOptionsToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem ambiguityOptionsToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem loadKitsToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem loadDistancesToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem saveTreeJPGToolStripMenuItem;
 
     }

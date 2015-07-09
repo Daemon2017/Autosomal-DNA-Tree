@@ -12,17 +12,17 @@ namespace auTree
 {
     public partial class Form1
     {
-        void FrontOrBack(double kit)
-        {
-            if (kit != 0)
-            {
-                relative[relativeNum].BringToFront();
-            }
-            else
-            {
-                relative[relativeNum].SendToBack();
-            }
-        }
+        int relativeNum = 0;
+        int selfNum = 0;
+
+        int shiftW = 50;
+        int shiftH = 100;
+
+        int containerWidth = 100;
+        int containerHeight = 50;
+
+        public Label person;
+        public Label[] relative;
 
         //Поколение +1
         void drawChild(double kit)
@@ -352,6 +352,18 @@ namespace auTree
             this.Controls.Add(relative[relativeNum]);
 
             FrontOrBack(kit);
+        }
+
+        void FrontOrBack(double kit)
+        {
+            if (kit != 0)
+            {
+                relative[relativeNum].BringToFront();
+            }
+            else
+            {
+                relative[relativeNum].SendToBack();
+            }
         }
     }
 }
