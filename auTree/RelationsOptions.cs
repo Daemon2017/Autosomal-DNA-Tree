@@ -95,11 +95,11 @@ namespace auTree
         {
             //Загрузка нижних и верхних границ интервалов для каждого возможного родства
             string[] lines = File.ReadAllLines("RelationsOptions.cfg");
-            string[,] relationsData = new string[lines.Length, lines[0].Split(' ').Length];
+            string[,] relationsData = new string[lines.Length, lines[0].Split(';').Length];
 
             for (int i = 0; i < lines.Length; i++)
             {
-                string[] tempData = lines[i].Split(' ');
+                string[] tempData = lines[i].Split(';');
 
                 for (int j = 0; j < tempData.Length; j++)
                 {
@@ -288,7 +288,7 @@ namespace auTree
                 {
                     for (int j = 0; j < 2; j++)
                     {
-                        gg.Write(mass[i, j] + " ");
+                        gg.Write(mass[i, j] + ";");
                     }
                     gg.Write("\r\n");
                 }

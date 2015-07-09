@@ -25,19 +25,6 @@ namespace auTree
              260621,
              222811
          };
-
-         double[,] genDist = 
-        {
-            {0,   1,   1.7, 1.6, 2.2, 3.1, 3.6, 3.8, 6.4},
-            {1,   0,   1,   1.2, 1.6, 2.6, 3.2, 3.5, 5.8},
-            {1.7, 1,   0,   1,   1.2, 2,   2.8, 2.4, 3.7},
-            {1.6, 1.2, 1,   0,   1.6, 2.7, 3.4, 3,   6.2},
-            {2.2, 1.6, 1.2, 1.6, 0,   1.9, 2.9, 2.5, 3.6},
-            {3.1, 2.6, 2,   2.7, 1.9, 0,   1.5, 2.4, 3.9},
-            {3.6, 3.2, 2.8, 3.4, 2.9, 1.5, 0,   3.3, 4.3},
-            {3.8, 3.5, 2.4, 3,   2.5, 2.4, 3.3, 0,   4},
-            {6.4, 5.8, 3.7, 6.2, 3.6, 3.9, 4.3, 4,   0}
-        };
          
         void centralPersonBuild()
         {
@@ -46,13 +33,27 @@ namespace auTree
 
         void relationsBuild()
         {
+            //Загрузка матрицы родовых расстояний
+            string[] genLines = File.ReadAllLines("GeneticDistances.txt");
+            double[,] genDist = new double[genLines.Length, genLines[0].Split(';').Length];
+
+            for (int i = 0; i < genLines.Length; i++)
+            {
+                string[] genTemp = genLines[i].Split(';');
+
+                for (int j = 0; j < genTemp.Length; j++)
+                {
+                    if (Double.TryParse(genTemp[j], out genDist[i, j])) ;
+                }
+            }
+
             //Загрузка нижних и верхних границ интервалов для каждого возможного родства
             string[] lines = File.ReadAllLines("RelationsOptions.cfg");
-            double[,] num = new double[lines.Length, lines[0].Split(' ').Length];
+            double[,] num = new double[lines.Length, lines[0].Split(';').Length];
 
             for (int i = 0; i < lines.Length; i++)
             {
-                string[] temp = lines[i].Split(' ');
+                string[] temp = lines[i].Split(';');
 
                 for (int j = 0; j < temp.Length; j++)
                 {
@@ -78,9 +79,9 @@ namespace auTree
                 }
 
                 //Поколение -1
-                if (genDist[selfNum, j] >= num[5, 0] && genDist[selfNum, j] <= num[5, 1])
+                 if (genDist[selfNum, j] >= num[5, 0] && genDist[selfNum, j] <= num[5, 1])
                 {
-                    ChildOrParent(j);
+                    ChildOrParent(j, genDist);
                 }
 
                 if (genDist[selfNum, j] >= num[6, 0] && genDist[selfNum, j] <= num[6, 1])

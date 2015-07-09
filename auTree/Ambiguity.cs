@@ -13,7 +13,7 @@ namespace auTree
     public partial class Form1
     {
         //Неоднозначности
-        void ChildOrParent(int j)
+        void ChildOrParent(int j, double[,] genDist)
         {
             double father = 0;
             double halfTotal = genDist.GetLength(0) / 2;
