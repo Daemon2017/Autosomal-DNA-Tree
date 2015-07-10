@@ -30,10 +30,10 @@
         {
             this.menuStrip1 = new System.Windows.Forms.MenuStrip();
             this.startToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.saveTreeJPGToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.optionsToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.relationsOptionsToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.ambiguityOptionsToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.saveTreeJPGToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.menuStrip1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -56,6 +56,12 @@
             this.startToolStripMenuItem.Text = "Построить";
             this.startToolStripMenuItem.Click += new System.EventHandler(this.startToolStripMenuItem_Click);
             // 
+            // saveTreeJPGToolStripMenuItem
+            // 
+            this.saveTreeJPGToolStripMenuItem.Name = "saveTreeJPGToolStripMenuItem";
+            this.saveTreeJPGToolStripMenuItem.Size = new System.Drawing.Size(143, 20);
+            this.saveTreeJPGToolStripMenuItem.Text = "Сохранить древо в JPG";
+            // 
             // optionsToolStripMenuItem
             // 
             this.optionsToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
@@ -77,12 +83,6 @@
             this.ambiguityOptionsToolStripMenuItem.Name = "ambiguityOptionsToolStripMenuItem";
             this.ambiguityOptionsToolStripMenuItem.Size = new System.Drawing.Size(247, 22);
             this.ambiguityOptionsToolStripMenuItem.Text = "Настройки неопределенностей";
-            // 
-            // saveTreeJPGToolStripMenuItem
-            // 
-            this.saveTreeJPGToolStripMenuItem.Name = "saveTreeJPGToolStripMenuItem";
-            this.saveTreeJPGToolStripMenuItem.Size = new System.Drawing.Size(143, 20);
-            this.saveTreeJPGToolStripMenuItem.Text = "Сохранить древо в JPG";
             // 
             // Form1
             // 
