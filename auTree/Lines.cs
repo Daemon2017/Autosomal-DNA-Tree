@@ -53,20 +53,12 @@ namespace auTree
             Form1.DrawLine(myPen, person.Location.X + 50, person.Location.Y - 1 * (25 + shiftW) + 50, person.Location.X + 1 * (25 + shiftH) + 50, person.Location.Y - 0 * (25 + shiftW));
         }
 
-        void drawLineUp(int x, int y)
+        void drawLine(int x, int y)
         {
             System.Drawing.Pen myPen;
             myPen = new System.Drawing.Pen(System.Drawing.Color.Black);
             System.Drawing.Graphics Form1 = this.CreateGraphics();
-            Form1.DrawLine(myPen, person.Location.X + 50 + x * (25 + shiftH), person.Location.Y + y * (25 + shiftW), person.Location.X + 50 + x * (25 + shiftH), person.Location.Y + (y + 1) * (25 + shiftW));
-        }
-
-        void drawLineDown(int x, int y)
-        {
-            System.Drawing.Pen myPen;
-            myPen = new System.Drawing.Pen(System.Drawing.Color.Black);
-            System.Drawing.Graphics Form1 = this.CreateGraphics();
-            Form1.DrawLine(myPen, person.Location.X + 50 + x * (25 + shiftH), person.Location.Y + y * (25 + shiftW), person.Location.X + 50 + x * (25 + shiftH), person.Location.Y + (y - 1) * (25 + shiftW));
+            Form1.DrawLine(myPen, x + 50, y+50, x + 50, y + 75);
         }
     }
 }
