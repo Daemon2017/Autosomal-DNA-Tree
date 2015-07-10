@@ -63,6 +63,21 @@ namespace auTree
             for (int j = 0; j < genDist.GetLength(0); j++)
             {
                 //Поколение 0
+                if (genDist[selfNum, j] >= num[0, 0] && genDist[selfNum, j] <= num[0, 1])
+                {
+
+                }
+
+                if (genDist[selfNum, j] >= num[1, 0] && genDist[selfNum, j] <= num[1, 1])
+                {
+
+                }
+
+                if (genDist[selfNum, j] >= num[2, 0] && genDist[selfNum, j] <= num[2, 1])
+                {
+
+                }
+
                 if (genDist[selfNum, j] >= num[3, 0] && genDist[selfNum, j] <= num[3, 1])
                 {
                     drawFather(0);
@@ -73,6 +88,11 @@ namespace auTree
                     draw1stCousin2R(0);
                     draw2ndCousin1R(0);
                     draw3rdCousin(kitNumb[j]);
+                }
+
+                if (genDist[selfNum, j] >= num[4, 0] && genDist[selfNum, j] <= num[4, 1])
+                {
+
                 }
 
                 //Поколение -1
@@ -88,6 +108,11 @@ namespace auTree
                     drawUncle(kitNumb[j]);
                 }
 
+                if (genDist[selfNum, j] >= num[7, 0] && genDist[selfNum, j] <= num[7, 1])
+                {
+
+                }
+
                 if (genDist[selfNum, j] >= num[8, 0] && genDist[selfNum, j] <= num[8, 1])
                 {
                     drawFather(0);
@@ -97,6 +122,11 @@ namespace auTree
                     drawGreatgranduncle(0);
                     draw1stCousin2R(0);
                     draw2ndCousin1R(kitNumb[j]);
+                }
+
+                if (genDist[selfNum, j] >= num[9, 0] && genDist[selfNum, j] <= num[9, 1])
+                {
+
                 }
 
                 //Поколение -2
@@ -122,6 +152,44 @@ namespace auTree
                     drawGreatgreatgrandfather(0);
                     drawGreatgranduncle(0);
                     draw1stCousin2R(kitNumb[j]);
+                }
+
+                if (genDist[selfNum, j] >= num[13, 0] && genDist[selfNum, j] <= num[13, 1])
+                {
+
+                }
+
+                //Поколение -3
+                if (genDist[selfNum, j] >= num[14, 0] && genDist[selfNum, j] <= num[14, 1])
+                {
+
+                }
+
+                if (genDist[selfNum, j] >= num[15, 0] && genDist[selfNum, j] <= num[15, 1])
+                {
+
+                }
+
+                if (genDist[selfNum, j] >= num[16, 0] && genDist[selfNum, j] <= num[16, 1])
+                {
+
+                }
+
+                //Поколение -4
+                if (genDist[selfNum, j] >= num[17, 0] && genDist[selfNum, j] <= num[17, 1])
+                {
+
+                }
+
+                if (genDist[selfNum, j] >= num[18, 0] && genDist[selfNum, j] <= num[18, 1])
+                {
+
+                }
+
+                //Поколение -5
+                if (genDist[selfNum, j] >= num[19, 0] && genDist[selfNum, j] <= num[19, 1])
+                {
+
                 }
             }
         }

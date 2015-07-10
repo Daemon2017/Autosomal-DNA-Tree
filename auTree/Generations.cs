@@ -74,8 +74,6 @@ namespace auTree
             relative[relativeNum].BackColor = Color.White;
             this.Controls.Add(relative[relativeNum]);
 
-            drawLine(relative[relativeNum].Location.X, relative[relativeNum].Location.Y);
-
             FrontOrBack(kit);
         }
 
@@ -88,8 +86,6 @@ namespace auTree
             relative[relativeNum].Text = "2nd Cousin \n" + kit.ToString();
             relative[relativeNum].BackColor = Color.White;
             this.Controls.Add(relative[relativeNum]);
-
-            drawLine(3, 0);
 
             FrontOrBack(kit);
         }
@@ -104,8 +100,6 @@ namespace auTree
             relative[relativeNum].BackColor = Color.White;
             this.Controls.Add(relative[relativeNum]);
 
-            drawLine(4, 0);
-
             FrontOrBack(kit);
         }
 
@@ -118,8 +112,6 @@ namespace auTree
             relative[relativeNum].Text = "4th Cousin \n" + kit.ToString();
             relative[relativeNum].BackColor = Color.White;
             this.Controls.Add(relative[relativeNum]);
-
-            drawLine(relative[relativeNum].Location.X, relative[relativeNum].Location.Y);
 
             FrontOrBack(kit);
         }
