@@ -53,6 +53,8 @@ namespace auTree
 
         void drawBrother(double kit)
         {
+            drawLineFtoB();
+
             relative[relativeNum] = new Label();
             relative[relativeNum].Location = new Point(person.Location.X + (25 + shiftH), person.Location.Y);
             relative[relativeNum].Name = "Brother";
@@ -323,6 +325,8 @@ namespace auTree
 
         void drawGreatgreatgranduncle(double kit)
         {
+            drawLineGGGGFtoGGGU();
+
             relative[relativeNum] = new Label();
             relative[relativeNum].Location = new Point(person.Location.X + 5 * (25 + shiftH), person.Location.Y - 4 * (25 + shiftW));
             relative[relativeNum].Name = "Greatgreatgranduncle";

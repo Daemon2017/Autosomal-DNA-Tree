@@ -60,17 +60,17 @@ namespace auTree
                 //Поколение 0
                 if (genDist[selfNum, j] >= num[0, 0] && genDist[selfNum, j] <= num[0, 1])
                 {
-
+                    FLine(1, kitNumb[j]);
                 }
 
                 if (genDist[selfNum, j] >= num[1, 0] && genDist[selfNum, j] <= num[1, 1])
                 {
-
+                    GFLine(2, kitNumb[j]);
                 }
 
                 if (genDist[selfNum, j] >= num[2, 0] && genDist[selfNum, j] <= num[2, 1])
                 {
-
+                    GGFLine(3, kitNumb[j]);
                 }
 
                 if (genDist[selfNum, j] >= num[3, 0] && genDist[selfNum, j] <= num[3, 1])
@@ -80,7 +80,7 @@ namespace auTree
 
                 if (genDist[selfNum, j] >= num[4, 0] && genDist[selfNum, j] <= num[4, 1])
                 {
-
+                    GGGGFLine(5, kitNumb[j]);
                 }
 
                 //Поколение -1
@@ -96,7 +96,7 @@ namespace auTree
 
                 if (genDist[selfNum, j] >= num[7, 0] && genDist[selfNum, j] <= num[7, 1])
                 {
-
+                    GGFLine(2, kitNumb[j]);
                 }
 
                 if (genDist[selfNum, j] >= num[8, 0] && genDist[selfNum, j] <= num[8, 1])
@@ -106,7 +106,7 @@ namespace auTree
 
                 if (genDist[selfNum, j] >= num[9, 0] && genDist[selfNum, j] <= num[9, 1])
                 {
-
+                    GGGGFLine(4, kitNumb[j]);
                 }
 
                 //Поколение -2
@@ -121,47 +121,47 @@ namespace auTree
                     GGFLine(1, kitNumb[j]);
                 }
 
-                if (genDist[selfNum, j] == 3.1)
+                if (genDist[selfNum, j] >= num[12, 0] && genDist[selfNum, j] <= num[12, 1])
                 {
                     GGGFLine(2, kitNumb[j]);
                 }
 
                 if (genDist[selfNum, j] >= num[13, 0] && genDist[selfNum, j] <= num[13, 1])
                 {
-
+                    GGGGFLine(3, kitNumb[j]);
                 }
 
                 //Поколение -3
                 if (genDist[selfNum, j] >= num[14, 0] && genDist[selfNum, j] <= num[14, 1])
                 {
-
+                    GGFLine(0, kitNumb[j]);
                 }
 
                 if (genDist[selfNum, j] >= num[15, 0] && genDist[selfNum, j] <= num[15, 1])
                 {
-
+                    GGGFLine(1, kitNumb[j]);
                 }
 
                 if (genDist[selfNum, j] >= num[16, 0] && genDist[selfNum, j] <= num[16, 1])
                 {
-
+                    GGGGFLine(2, kitNumb[j]);
                 }
 
                 //Поколение -4
                 if (genDist[selfNum, j] >= num[17, 0] && genDist[selfNum, j] <= num[17, 1])
                 {
-
+                    GGGFLine(0, kitNumb[j]);
                 }
 
                 if (genDist[selfNum, j] >= num[18, 0] && genDist[selfNum, j] <= num[18, 1])
                 {
-
+                    GGGGFLine(1, kitNumb[j]);
                 }
 
                 //Поколение -5
                 if (genDist[selfNum, j] >= num[19, 0] && genDist[selfNum, j] <= num[19, 1])
                 {
-
+                    GGGGFLine(0, kitNumb[j]);
                 }
             }
         }
