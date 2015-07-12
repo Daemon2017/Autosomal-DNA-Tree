@@ -47,6 +47,9 @@
     <Compile Include="Ambiguity.cs">
       <SubType>Form</SubType>
     </Compile>
+    <Compile Include="Branches.cs">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Include="Form1.cs">
       <SubType>Form</SubType>
     </Compile>

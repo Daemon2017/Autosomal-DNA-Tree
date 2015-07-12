@@ -15,11 +15,6 @@ namespace auTree
     {
         int[] kitNumb = new int[30];
 
-        void centralPersonBuild()
-        {
-            drawSelf(kitNumb[0]);
-        }
-
         void relationsBuild()
         {
             //Загрузка номеров китов
@@ -58,7 +53,7 @@ namespace auTree
                 }
             }
 
-            centralPersonBuild();
+            drawSelf(kitNumb[0]);
 
             for (int j = 0; j < genDist.GetLength(0); j++)
             {
@@ -80,14 +75,7 @@ namespace auTree
 
                 if (genDist[selfNum, j] >= num[3, 0] && genDist[selfNum, j] <= num[3, 1])
                 {
-                    drawFather(0);
-                    drawGrandfather(0);
-                    drawGreatgrandfather(0);
-                    drawGreatgreatgrandfather(0);
-                    drawGreatgranduncle(0);
-                    draw1stCousin2R(0);
-                    draw2ndCousin1R(0);
-                    draw3rdCousin(kitNumb[j]);
+                    GGGFLine(4, kitNumb[j]);
                 }
 
                 if (genDist[selfNum, j] >= num[4, 0] && genDist[selfNum, j] <= num[4, 1])
@@ -103,9 +91,7 @@ namespace auTree
 
                 if (genDist[selfNum, j] >= num[6, 0] && genDist[selfNum, j] <= num[6, 1])
                 {
-                    drawFather(0);
-                    drawGrandfather(0);
-                    drawUncle(kitNumb[j]);
+                    GFLine(1, kitNumb[j]);
                 }
 
                 if (genDist[selfNum, j] >= num[7, 0] && genDist[selfNum, j] <= num[7, 1])
@@ -115,13 +101,7 @@ namespace auTree
 
                 if (genDist[selfNum, j] >= num[8, 0] && genDist[selfNum, j] <= num[8, 1])
                 {
-                    drawFather(0);
-                    drawGrandfather(0);
-                    drawGreatgrandfather(0);
-                    drawGreatgreatgrandfather(0);
-                    drawGreatgranduncle(0);
-                    draw1stCousin2R(0);
-                    draw2ndCousin1R(kitNumb[j]);
+                    GGGFLine(3, kitNumb[j]);
                 }
 
                 if (genDist[selfNum, j] >= num[9, 0] && genDist[selfNum, j] <= num[9, 1])
@@ -138,20 +118,12 @@ namespace auTree
 
                 if (genDist[selfNum, j] >= num[11, 0] && genDist[selfNum, j] <= num[11, 1])
                 {
-                    drawFather(0);
-                    drawGrandfather(0);
-                    drawGreatgrandfather(0);
-                    drawGranduncle(kitNumb[j]);
+                    GGFLine(1, kitNumb[j]);
                 }
 
                 if (genDist[selfNum, j] == 3.1)
                 {
-                    drawFather(0);
-                    drawGrandfather(0);
-                    drawGreatgrandfather(0);
-                    drawGreatgreatgrandfather(0);
-                    drawGreatgranduncle(0);
-                    draw1stCousin2R(kitNumb[j]);
+                    GGGFLine(2, kitNumb[j]);
                 }
 
                 if (genDist[selfNum, j] >= num[13, 0] && genDist[selfNum, j] <= num[13, 1])
