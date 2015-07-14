@@ -18,7 +18,7 @@ namespace auTree
             System.Drawing.Pen myPen;
             myPen = new System.Drawing.Pen(System.Drawing.Color.Black);
             System.Drawing.Graphics Form1 = this.CreateGraphics();
-            Form1.DrawLine(myPen, person.Location.X + 50, person.Location.Y - 5 * (25 + shiftW) + 50, person.Location.X + 5 * (25 + shiftH) + 50, person.Location.Y - 4 * (25 + shiftW));
+            Form1.DrawLine(myPen, personX + 50, personY - 5 * (25 + shiftW) + 50, personX + 5 * (25 + shiftH) + 50, personY - 4 * (25 + shiftW));
         }
 
         void drawLineGGGFtoGGU()
@@ -26,7 +26,7 @@ namespace auTree
             System.Drawing.Pen myPen;
             myPen = new System.Drawing.Pen(System.Drawing.Color.Black);
             System.Drawing.Graphics Form1 = this.CreateGraphics();
-            Form1.DrawLine(myPen, person.Location.X + 50, person.Location.Y - 4 * (25 + shiftW) + 50, person.Location.X + 4 * (25 + shiftH) + 50, person.Location.Y - 3 * (25 + shiftW));
+            Form1.DrawLine(myPen, personX + 50, personY - 4 * (25 + shiftW) + 50, personX + 4 * (25 + shiftH) + 50, personY - 3 * (25 + shiftW));
         }
 
         void drawLineGGFtoGU()
@@ -34,7 +34,7 @@ namespace auTree
             System.Drawing.Pen myPen;
             myPen = new System.Drawing.Pen(System.Drawing.Color.Black);
             System.Drawing.Graphics Form1 = this.CreateGraphics();
-            Form1.DrawLine(myPen, person.Location.X + 50, person.Location.Y - 3 * (25 + shiftW) + 50, person.Location.X + 3 * (25 + shiftH) + 50, person.Location.Y - 2 * (25 + shiftW));
+            Form1.DrawLine(myPen, personX + 50, personY - 3 * (25 + shiftW) + 50, personX + 3 * (25 + shiftH) + 50, personY - 2 * (25 + shiftW));
         }
 
         void drawLineGFtoU()
@@ -42,7 +42,7 @@ namespace auTree
             System.Drawing.Pen myPen;
             myPen = new System.Drawing.Pen(System.Drawing.Color.Black);
             System.Drawing.Graphics Form1 = this.CreateGraphics();
-            Form1.DrawLine(myPen, person.Location.X + 50, person.Location.Y - 2 * (25 + shiftW) + 50, person.Location.X + 2 * (25 + shiftH) + 50, person.Location.Y - 1 * (25 + shiftW));
+            Form1.DrawLine(myPen, personX + 50, personY - 2 * (25 + shiftW) + 50, personX + 2 * (25 + shiftH) + 50, personY - 1 * (25 + shiftW));
         }
 
         void drawLineFtoB()
@@ -50,7 +50,7 @@ namespace auTree
             System.Drawing.Pen myPen;
             myPen = new System.Drawing.Pen(System.Drawing.Color.Black);
             System.Drawing.Graphics Form1 = this.CreateGraphics();
-            Form1.DrawLine(myPen, person.Location.X + 50, person.Location.Y - 1 * (25 + shiftW) + 50, person.Location.X + 1 * (25 + shiftH) + 50, person.Location.Y - 0 * (25 + shiftW));
+            Form1.DrawLine(myPen, personX + 50, personY - 1 * (25 + shiftW) + 50, personX + 1 * (25 + shiftH) + 50, personY - 0 * (25 + shiftW));
         }
 
         void drawLine(int x, int y)
@@ -58,7 +58,7 @@ namespace auTree
             System.Drawing.Pen myPen;
             myPen = new System.Drawing.Pen(System.Drawing.Color.Black);
             System.Drawing.Graphics Form1 = this.CreateGraphics();
-            Form1.DrawLine(myPen, x + 50, y+50, x + 50, y + 75);
+            Form1.DrawLine(myPen, x + 50, y + 50, x + 50, y + 75);
         }
     }
 }

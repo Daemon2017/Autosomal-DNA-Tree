@@ -15,11 +15,9 @@ namespace auTree
         int relativeNum = 0;
         int selfNum = 0;
 
-        int shiftW = 50;
-        int shiftH = 100;
-
-        int containerWidth = 100;
-        int containerHeight = 50;
+        int shiftW = 50, shiftH = 100;
+        int containerWidth = 100, containerHeight = 50;
+        int personX=12, personY=500;
 
         public Label person;
         public Label[] relative;
@@ -28,7 +26,7 @@ namespace auTree
         void drawChild(double kit)
         {
             relative[relativeNum] = new Label();
-            relative[relativeNum].Location = new Point(person.Location.X, person.Location.Y + (25 + shiftW));
+            relative[relativeNum].Location = new Point(personX, personY + (25 + shiftW));
             relative[relativeNum].Name = "Child";
             relative[relativeNum].Size = new System.Drawing.Size(containerWidth, containerHeight);
             relative[relativeNum].Text = "Child \n" + kit.ToString(); ;
@@ -41,14 +39,14 @@ namespace auTree
         //Поколение 0
         void drawSelf(double kit)
         {
-            person = new Label();
-            person.Location = new Point(12, 500);
-            person.Name = "Self";
-            person.Size = new System.Drawing.Size(containerWidth, containerHeight);
-            person.Text = "Self \n" + kitNumb[selfNum].ToString();
-            person.BackColor = Color.White;
-            person.Visible = true;
-            this.Controls.Add(person);
+            relative[relativeNum] = new Label();
+            relative[relativeNum].Location = new Point(personX, personY);
+            relative[relativeNum].Name = "Self";
+            relative[relativeNum].Size = new System.Drawing.Size(containerWidth, containerHeight);
+            relative[relativeNum].Text = "Self \n" + kitNumb[selfNum].ToString();
+            relative[relativeNum].BackColor = Color.White;
+            relative[relativeNum].Visible = true;
+            this.Controls.Add(relative[relativeNum]);
         }
 
         void drawBrother(double kit)
@@ -56,7 +54,7 @@ namespace auTree
             drawLineFtoB();
 
             relative[relativeNum] = new Label();
-            relative[relativeNum].Location = new Point(person.Location.X + (25 + shiftH), person.Location.Y);
+            relative[relativeNum].Location = new Point(personX + (25 + shiftH), personY);
             relative[relativeNum].Name = "Brother";
             relative[relativeNum].Size = new System.Drawing.Size(containerWidth, containerHeight);
             relative[relativeNum].Text = "Brother \n" + kit.ToString();
@@ -69,7 +67,7 @@ namespace auTree
         void draw1stCousin(double kit)
         {
             relative[relativeNum] = new Label();
-            relative[relativeNum].Location = new Point(person.Location.X + 2 * (25 + shiftH), person.Location.Y);
+            relative[relativeNum].Location = new Point(personX + 2 * (25 + shiftH), personY);
             relative[relativeNum].Name = "1stCousin";
             relative[relativeNum].Size = new System.Drawing.Size(containerWidth, containerHeight);
             relative[relativeNum].Text = "1st Cousin \n" + kit.ToString();
@@ -82,7 +80,7 @@ namespace auTree
         void draw2ndCousin(double kit)
         {
             relative[relativeNum] = new Label();
-            relative[relativeNum].Location = new Point(person.Location.X + 3 * (25 + shiftH), person.Location.Y);
+            relative[relativeNum].Location = new Point(personX + 3 * (25 + shiftH), personY);
             relative[relativeNum].Name = "2ndCousin";
             relative[relativeNum].Size = new System.Drawing.Size(containerWidth, containerHeight);
             relative[relativeNum].Text = "2nd Cousin \n" + kit.ToString();
@@ -95,7 +93,7 @@ namespace auTree
         void draw3rdCousin(double kit)
         {
             relative[relativeNum] = new Label();
-            relative[relativeNum].Location = new Point(person.Location.X + 4 * (25 + shiftH), person.Location.Y);
+            relative[relativeNum].Location = new Point(personX + 4 * (25 + shiftH), personY);
             relative[relativeNum].Name = "3rdCousin";
             relative[relativeNum].Size = new System.Drawing.Size(containerWidth, containerHeight);
             relative[relativeNum].Text = "3rd Cousin \n" + kit.ToString();
@@ -108,7 +106,7 @@ namespace auTree
         void draw4thCousin(double kit)
         {
             relative[relativeNum] = new Label();
-            relative[relativeNum].Location = new Point(person.Location.X + 5 * (25 + shiftH), person.Location.Y);
+            relative[relativeNum].Location = new Point(personX + 5 * (25 + shiftH), personY);
             relative[relativeNum].Name = "4thCousin";
             relative[relativeNum].Size = new System.Drawing.Size(containerWidth, containerHeight);
             relative[relativeNum].Text = "4th Cousin \n" + kit.ToString();
@@ -122,7 +120,7 @@ namespace auTree
         void drawFather(double kit)
         {
             relative[relativeNum] = new Label();
-            relative[relativeNum].Location = new Point(person.Location.X, person.Location.Y - (25 + shiftW));
+            relative[relativeNum].Location = new Point(personX, personY - (25 + shiftW));
             relative[relativeNum].Name = "Father";
             relative[relativeNum].Size = new System.Drawing.Size(containerWidth, containerHeight);
             relative[relativeNum].Text = "Father \n" + kit.ToString();
@@ -139,7 +137,7 @@ namespace auTree
             drawLineGFtoU();
 
             relative[relativeNum] = new Label();
-            relative[relativeNum].Location = new Point(person.Location.X + 2 * (25 + shiftH), person.Location.Y - (25 + shiftW));
+            relative[relativeNum].Location = new Point(personX + 2 * (25 + shiftH), personY - (25 + shiftW));
             relative[relativeNum].Name = "Uncle";
             relative[relativeNum].Size = new System.Drawing.Size(containerWidth, containerHeight);
             relative[relativeNum].Text = "Uncle \n" + kit.ToString();
@@ -154,7 +152,7 @@ namespace auTree
         void draw1stCousin1R(double kit)
         {
             relative[relativeNum] = new Label();
-            relative[relativeNum].Location = new Point(person.Location.X + 3 * (25 + shiftH), person.Location.Y - (25 + shiftW));
+            relative[relativeNum].Location = new Point(personX + 3 * (25 + shiftH), personY - (25 + shiftW));
             relative[relativeNum].Name = "1stCousin1R";
             relative[relativeNum].Size = new System.Drawing.Size(containerWidth, containerHeight);
             relative[relativeNum].Text = "1st Cousin 1R \n" + kit.ToString();
@@ -169,7 +167,7 @@ namespace auTree
         void draw2ndCousin1R(double kit)
         {
             relative[relativeNum] = new Label();
-            relative[relativeNum].Location = new Point(person.Location.X + 4 * (25 + shiftH), person.Location.Y - (25 + shiftW));
+            relative[relativeNum].Location = new Point(personX + 4 * (25 + shiftH), personY - (25 + shiftW));
             relative[relativeNum].Name = "2ndCousin1R";
             relative[relativeNum].Size = new System.Drawing.Size(containerWidth, containerHeight);
             relative[relativeNum].Text = "2nd Cousin 1R \n" + kit.ToString();
@@ -184,7 +182,7 @@ namespace auTree
         void draw3rdCousin1R(double kit)
         {
             relative[relativeNum] = new Label();
-            relative[relativeNum].Location = new Point(person.Location.X + 5 * (25 + shiftH), person.Location.Y - (25 + shiftW));
+            relative[relativeNum].Location = new Point(personX + 5 * (25 + shiftH), personY - (25 + shiftW));
             relative[relativeNum].Name = "3rdCousin1R";
             relative[relativeNum].Size = new System.Drawing.Size(containerWidth, containerHeight);
             relative[relativeNum].Text = "3rd Cousin 1R \n" + kit.ToString();
@@ -200,7 +198,7 @@ namespace auTree
         void drawGrandfather(double kit)
         {
             relative[relativeNum] = new Label();
-            relative[relativeNum].Location = new Point(person.Location.X, person.Location.Y - 2 * (25 + shiftW));
+            relative[relativeNum].Location = new Point(personX, personY - 2 * (25 + shiftW));
             relative[relativeNum].Name = "Grandfather";
             relative[relativeNum].Size = new System.Drawing.Size(containerWidth, containerHeight);
             relative[relativeNum].Text = "Grandfather \n" + kit.ToString();
@@ -217,7 +215,7 @@ namespace auTree
             drawLineGGFtoGU();
 
             relative[relativeNum] = new Label();
-            relative[relativeNum].Location = new Point(person.Location.X + 3 * (25 + shiftH), person.Location.Y - 2 * (25 + shiftW));
+            relative[relativeNum].Location = new Point(personX + 3 * (25 + shiftH), personY - 2 * (25 + shiftW));
             relative[relativeNum].Name = "Granduncle";
             relative[relativeNum].Size = new System.Drawing.Size(containerWidth, containerHeight);
             relative[relativeNum].Text = "Grand-uncle \n" + kit.ToString();
@@ -232,7 +230,7 @@ namespace auTree
         void draw1stCousin2R(double kit)
         {
             relative[relativeNum] = new Label();
-            relative[relativeNum].Location = new Point(person.Location.X + 4 * (25 + shiftH), person.Location.Y - 2 * (25 + shiftW));
+            relative[relativeNum].Location = new Point(personX + 4 * (25 + shiftH), personY - 2 * (25 + shiftW));
             relative[relativeNum].Name = "1stCousin2R";
             relative[relativeNum].Size = new System.Drawing.Size(containerWidth, containerHeight);
             relative[relativeNum].Text = "1st Cousin 2R \n" + kit.ToString();
@@ -247,7 +245,7 @@ namespace auTree
         void draw2ndCousin2R(double kit)
         {
             relative[relativeNum] = new Label();
-            relative[relativeNum].Location = new Point(person.Location.X + 5 * (25 + shiftH), person.Location.Y - 2 * (25 + shiftW));
+            relative[relativeNum].Location = new Point(personX + 5 * (25 + shiftH), personY - 2 * (25 + shiftW));
             relative[relativeNum].Name = "2ndCousin2R";
             relative[relativeNum].Size = new System.Drawing.Size(containerWidth, containerHeight);
             relative[relativeNum].Text = "2nd Cousin 2R \n" + kit.ToString();
@@ -263,7 +261,7 @@ namespace auTree
         void drawGreatgrandfather(double kit)
         {
             relative[relativeNum] = new Label();
-            relative[relativeNum].Location = new Point(person.Location.X, person.Location.Y - 3 * (25 + shiftW));
+            relative[relativeNum].Location = new Point(personX, personY - 3 * (25 + shiftW));
             relative[relativeNum].Name = "Greatgrandfather";
             relative[relativeNum].Size = new System.Drawing.Size(containerWidth, containerHeight);
             relative[relativeNum].Text = "Great-grandfather \n" + kit.ToString();
@@ -280,7 +278,7 @@ namespace auTree
             drawLineGGGFtoGGU();
 
             relative[relativeNum] = new Label();
-            relative[relativeNum].Location = new Point(person.Location.X + 4 * (25 + shiftH), person.Location.Y - 3 * (25 + shiftW));
+            relative[relativeNum].Location = new Point(personX + 4 * (25 + shiftH), personY - 3 * (25 + shiftW));
             relative[relativeNum].Name = "Greatgranduncle";
             relative[relativeNum].Size = new System.Drawing.Size(containerWidth, containerHeight);
             relative[relativeNum].Text = "Great-grand-uncle " + kit.ToString();
@@ -295,7 +293,7 @@ namespace auTree
         void draw1stCousin3R(double kit)
         {
             relative[relativeNum] = new Label();
-            relative[relativeNum].Location = new Point(person.Location.X + 5 * (25 + shiftH), person.Location.Y - 3 * (25 + shiftW));
+            relative[relativeNum].Location = new Point(personX + 5 * (25 + shiftH), personY - 3 * (25 + shiftW));
             relative[relativeNum].Name = "1stCousin3R";
             relative[relativeNum].Size = new System.Drawing.Size(containerWidth, containerHeight);
             relative[relativeNum].Text = "1st Cousin 3R \n" + kit.ToString();
@@ -311,7 +309,7 @@ namespace auTree
         void drawGreatgreatgrandfather(double kit)
         {
             relative[relativeNum] = new Label();
-            relative[relativeNum].Location = new Point(person.Location.X, person.Location.Y - 4 * (25 + shiftW));
+            relative[relativeNum].Location = new Point(personX, personY - 4 * (25 + shiftW));
             relative[relativeNum].Name = "Greatgreatgrandfather";
             relative[relativeNum].Size = new System.Drawing.Size(containerWidth, containerHeight);
             relative[relativeNum].Text = "Great-great-grandfather \n" + kit.ToString();
@@ -328,7 +326,7 @@ namespace auTree
             drawLineGGGGFtoGGGU();
 
             relative[relativeNum] = new Label();
-            relative[relativeNum].Location = new Point(person.Location.X + 5 * (25 + shiftH), person.Location.Y - 4 * (25 + shiftW));
+            relative[relativeNum].Location = new Point(personX + 5 * (25 + shiftH), personY - 4 * (25 + shiftW));
             relative[relativeNum].Name = "Greatgreatgranduncle";
             relative[relativeNum].Size = new System.Drawing.Size(containerWidth, containerHeight);
             relative[relativeNum].Text = "Great-great-grand-uncle \n" + kit.ToString();
@@ -344,7 +342,7 @@ namespace auTree
         void drawGreatgreatgreatgrandfather(double kit)
         {
             relative[relativeNum] = new Label();
-            relative[relativeNum].Location = new Point(person.Location.X, person.Location.Y - 5 * (25 + shiftW));
+            relative[relativeNum].Location = new Point(personX, personY - 5 * (25 + shiftW));
             relative[relativeNum].Name = "Greatgreatgreatgrandfather";
             relative[relativeNum].Size = new System.Drawing.Size(containerWidth, containerHeight);
             relative[relativeNum].Text = "Great-great-great-grandfather \n" + kit.ToString();
