@@ -91,7 +91,7 @@ namespace auTree
 
                 if (genDist[selfNum, j] >= num[6, 0] && genDist[selfNum, j] <= num[6, 1])
                 {
-                    GFLine(1, kitNumb[j]);
+                    UncleOrGF(j, genDist);
                 }
 
                 if (genDist[selfNum, j] >= num[7, 0] && genDist[selfNum, j] <= num[7, 1])
@@ -112,8 +112,7 @@ namespace auTree
                 //Поколение -2
                 if (genDist[selfNum, j] >= num[10, 0] && genDist[selfNum, j] <= num[10, 1])
                 {
-                    drawFather(0);
-                    drawGrandfather(kitNumb[j]);
+                    UncleOrGF(j, genDist);
                 }
 
                 if (genDist[selfNum, j] >= num[11, 0] && genDist[selfNum, j] <= num[11, 1])
