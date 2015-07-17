@@ -30,7 +30,7 @@ namespace auTree
 
             if (father > halfTotal)
             {
-                drawFather(kitNumb[j]);
+                FLine(0, kitNumb[j]);
             }
             else
             {
@@ -52,8 +52,7 @@ namespace auTree
 
             if (Math.Abs(result) >= 0.45)
             {
-                drawFather(0);
-                drawGrandfather(kitNumb[j]);
+                GFLine(0, kitNumb[j]);
             }
             else
             {

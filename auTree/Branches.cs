@@ -21,7 +21,17 @@ namespace auTree
             drawGrandfather(0);
             drawGreatgrandfather(0);
             drawGreatgreatgrandfather(0);
-            drawGreatgreatgreatgrandfather(0);
+
+            if (depth >= 0)
+            {
+                if (depth != 0)
+                {
+                    currentKit = 0;
+                }
+
+                drawGreatgreatgreatgrandfather(currentKit);
+                currentKit = kit;
+            }
 
             if (depth >= 1)
             {
@@ -29,6 +39,7 @@ namespace auTree
                 {
                     currentKit = 0;
                 }
+
                 drawGreatgreatgranduncle(currentKit);
                 currentKit = kit;
             }
@@ -39,6 +50,7 @@ namespace auTree
                 {
                     currentKit = 0;
                 }
+
                 draw1stCousin3R(currentKit);
                 currentKit = kit;
             }
@@ -49,6 +61,7 @@ namespace auTree
                 {
                     currentKit = 0;
                 }
+
                 draw2ndCousin2R(currentKit);
                 currentKit = kit;
             }
@@ -59,6 +72,7 @@ namespace auTree
                 {
                     currentKit = 0;
                 }
+
                 draw3rdCousin1R(currentKit);
                 currentKit = kit;
             }
@@ -69,6 +83,7 @@ namespace auTree
                 {
                     currentKit = 0;
                 }
+
                 draw4thCousin(currentKit);
                 currentKit = kit;
             }
@@ -81,7 +96,17 @@ namespace auTree
             drawFather(0);
             drawGrandfather(0);
             drawGreatgrandfather(0);
-            drawGreatgreatgrandfather(0);
+
+            if (depth >= 0)
+            {
+                if (depth != 0)
+                {
+                    currentKit = 0;
+                }
+
+                drawGreatgreatgrandfather(currentKit);
+                currentKit = kit;
+            }
 
             if (depth >= 1)
             {
@@ -89,6 +114,7 @@ namespace auTree
                 {
                     currentKit = 0;
                 }
+
                 drawGreatgranduncle(currentKit);
                 currentKit = kit;
             }
@@ -99,6 +125,7 @@ namespace auTree
                 {
                     currentKit = 0;
                 }
+
                 draw1stCousin2R(currentKit);
                 currentKit = kit;
             }
@@ -109,6 +136,7 @@ namespace auTree
                 {
                     currentKit = 0;
                 }
+
                 draw2ndCousin1R(currentKit);
                 currentKit = kit;
             }
@@ -119,6 +147,7 @@ namespace auTree
                 {
                     currentKit = 0;
                 }
+
                 draw3rdCousin(currentKit);
                 currentKit = kit;
             }
@@ -130,7 +159,17 @@ namespace auTree
 
             drawFather(0);
             drawGrandfather(0);
-            drawGreatgrandfather(0);
+
+            if (depth >= 0)
+            {
+                if (depth != 0)
+                {
+                    currentKit = 0;
+                }
+
+                drawGreatgrandfather(currentKit);
+                currentKit = kit;
+            }
 
             if (depth >= 1)
             {
@@ -138,6 +177,7 @@ namespace auTree
                 {
                     currentKit = 0;
                 }
+
                 drawGranduncle(currentKit);
                 currentKit = kit;
             }
@@ -148,6 +188,7 @@ namespace auTree
                 {
                     currentKit = 0;
                 }
+
                 draw1stCousin1R(currentKit);
                 currentKit = kit;
             }
@@ -158,6 +199,7 @@ namespace auTree
                 {
                     currentKit = 0;
                 }
+
                 draw2ndCousin(currentKit);
                 currentKit = kit;
             }
@@ -168,7 +210,17 @@ namespace auTree
             double currentKit = kit;
 
             drawFather(0);
-            drawGrandfather(0);
+
+            if (depth >= 0)
+            {
+                if (depth != 0)
+                {
+                    currentKit = 0;
+                }
+
+                drawGrandfather(currentKit);
+                currentKit = kit;
+            }
 
             if (depth >= 1)
             {
@@ -176,6 +228,7 @@ namespace auTree
                 {
                     currentKit = 0;
                 }
+
                 drawUncle(currentKit);
                 currentKit = kit;
             }
@@ -186,6 +239,7 @@ namespace auTree
                 {
                     currentKit = 0;
                 }
+
                 draw1stCousin(currentKit);
                 currentKit = kit;
             }
@@ -195,7 +249,16 @@ namespace auTree
         {
             double currentKit = kit;
 
-            drawFather(0);
+            if (depth >= 0)
+            {
+                if (depth != 0)
+                {
+                    currentKit = 0;
+                }
+
+                drawFather(currentKit);
+                currentKit = kit;
+            }
 
             if (depth >= 1)
             {
@@ -203,6 +266,7 @@ namespace auTree
                 {
                     currentKit = 0;
                 }
+
                 drawBrother(currentKit);
                 currentKit = kit;
             }
