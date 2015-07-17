@@ -50,7 +50,7 @@ namespace auTree
 
             result = compare.Average();
 
-            if (result >= 0.5)
+            if (Math.Abs(result) >= 0.45)
             {
                 drawFather(0);
                 drawGrandfather(kitNumb[j]);
@@ -58,6 +58,28 @@ namespace auTree
             else
             {
                 GFLine(1, kitNumb[j]);
+            }
+        }
+
+        void Amb1stC2ROr2ndC(int j, double[,] genDist)
+        {
+            double[] compare = new double[genDist.GetLength(0)];
+            double result;
+
+            for (int i = 0; i < genDist.GetLength(0); i++)
+            {
+                compare[i] = genDist[selfNum, i] - genDist[j, i];
+            }
+
+            result = compare.Average();
+
+            if (Math.Abs(result) >= 0.45)
+            {
+                GGFLine(3, kitNumb[j]);
+            }
+            else
+            {
+                GGGFLine(2, kitNumb[j]);
             }
         }
     }

@@ -19,7 +19,6 @@ namespace auTree
         int containerWidth = 100, containerHeight = 50;
         int personX=12, personY=500;
 
-        public Label person;
         public Label[] relative;
 
         //Поколение +1
