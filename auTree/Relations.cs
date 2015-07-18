@@ -75,7 +75,7 @@ namespace auTree
 
                 if (genDist[selfNum, j] >= num[3, 0] && genDist[selfNum, j] <= num[3, 1])
                 {
-                    GGGFLine(4, kitNumb[j]);
+                    Amb2ndC1ROr3rdC(j, genDist);
                 }
 
                 if (genDist[selfNum, j] >= num[4, 0] && genDist[selfNum, j] <= num[4, 1])
@@ -101,7 +101,7 @@ namespace auTree
 
                 if (genDist[selfNum, j] >= num[8, 0] && genDist[selfNum, j] <= num[8, 1])
                 {
-                    GGGFLine(3, kitNumb[j]);
+                    Amb2ndC1ROr3rdC(j, genDist);
                 }
 
                 if (genDist[selfNum, j] >= num[9, 0] && genDist[selfNum, j] <= num[9, 1])

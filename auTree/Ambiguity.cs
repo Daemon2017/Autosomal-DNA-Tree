@@ -81,5 +81,27 @@ namespace auTree
                 GGGFLine(2, kitNumb[j]);
             }
         }
+
+        void Amb2ndC1ROr3rdC(int j, double[,] genDist)
+        {
+            double[] compare = new double[genDist.GetLength(0)];
+            double result;
+
+            for (int i = 0; i < genDist.GetLength(0); i++)
+            {
+                compare[i] = genDist[selfNum, i] - genDist[j, i];
+            }
+
+            result = compare.Average();
+
+            if (Math.Abs(result) >= 0.17)
+            {
+                GGGFLine(4, kitNumb[j]);
+            }
+            else
+            {
+                GGGFLine(3, kitNumb[j]);
+            }
+        }
     }
 }
