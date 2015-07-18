@@ -13,7 +13,6 @@ namespace auTree
     public partial class Form1
     {
         //Неоднозначности
-
         void ambiguity(int j, double[,] genDist, string selectRelation)
         {
             double[] compare = new double[genDist.GetLength(0)];

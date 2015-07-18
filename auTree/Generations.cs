@@ -17,7 +17,7 @@ namespace auTree
 
         int shiftW = 50, shiftH = 100;
         int containerWidth = 100, containerHeight = 50;
-        int personX=12, personY=500;
+        int personX = 12, personY = 500;
 
         public Label[] relative;
 
@@ -50,7 +50,7 @@ namespace auTree
 
         void drawBrother(double kit)
         {
-            drawLineFtoB();
+            drawLines(0, 0, "FtoB");
 
             relative[relativeNum] = new Label();
             relative[relativeNum].Location = new Point(personX + (25 + shiftH), personY);
@@ -126,14 +126,14 @@ namespace auTree
             relative[relativeNum].BackColor = Color.White;
             this.Controls.Add(relative[relativeNum]);
 
-            drawLine(relative[relativeNum].Location.X, relative[relativeNum].Location.Y);
+            drawLines(relative[relativeNum].Location.X, relative[relativeNum].Location.Y, "Line");
 
             FrontOrBack(kit);
         }
 
         void drawUncle(double kit)
         {
-            drawLineGFtoU();
+            drawLines(0, 0, "GFtoU");
 
             relative[relativeNum] = new Label();
             relative[relativeNum].Location = new Point(personX + 2 * (25 + shiftH), personY - (25 + shiftW));
@@ -143,7 +143,7 @@ namespace auTree
             relative[relativeNum].BackColor = Color.White;
             this.Controls.Add(relative[relativeNum]);
 
-            drawLine(relative[relativeNum].Location.X, relative[relativeNum].Location.Y);
+            drawLines(relative[relativeNum].Location.X, relative[relativeNum].Location.Y, "Line");
 
             FrontOrBack(kit);
         }
@@ -158,7 +158,7 @@ namespace auTree
             relative[relativeNum].BackColor = Color.White;
             this.Controls.Add(relative[relativeNum]);
 
-            drawLine(relative[relativeNum].Location.X, relative[relativeNum].Location.Y);
+            drawLines(relative[relativeNum].Location.X, relative[relativeNum].Location.Y, "Line");
 
             FrontOrBack(kit);
         }
@@ -173,7 +173,7 @@ namespace auTree
             relative[relativeNum].BackColor = Color.White;
             this.Controls.Add(relative[relativeNum]);
 
-            drawLine(relative[relativeNum].Location.X, relative[relativeNum].Location.Y);
+            drawLines(relative[relativeNum].Location.X, relative[relativeNum].Location.Y, "Line");
 
             FrontOrBack(kit);
         }
@@ -188,7 +188,7 @@ namespace auTree
             relative[relativeNum].BackColor = Color.White;
             this.Controls.Add(relative[relativeNum]);
 
-            drawLine(relative[relativeNum].Location.X, relative[relativeNum].Location.Y);
+            drawLines(relative[relativeNum].Location.X, relative[relativeNum].Location.Y, "Line");
 
             FrontOrBack(kit);
         }
@@ -200,18 +200,18 @@ namespace auTree
             relative[relativeNum].Location = new Point(personX, personY - 2 * (25 + shiftW));
             relative[relativeNum].Name = "Grandfather";
             relative[relativeNum].Size = new System.Drawing.Size(containerWidth, containerHeight);
-            relative[relativeNum].Text = "Grandfather \n" + kit.ToString();
+            relative[relativeNum].Text = "Grandfather" + "\n" + kit.ToString();
             relative[relativeNum].BackColor = Color.White;
             this.Controls.Add(relative[relativeNum]);
 
-            drawLine(relative[relativeNum].Location.X, relative[relativeNum].Location.Y);
+            drawLines(relative[relativeNum].Location.X, relative[relativeNum].Location.Y, "Line");
 
             FrontOrBack(kit);
         }
 
         void drawGranduncle(double kit)
         {
-            drawLineGGFtoGU();
+            drawLines(0, 0, "GGFtoGU");
 
             relative[relativeNum] = new Label();
             relative[relativeNum].Location = new Point(personX + 3 * (25 + shiftH), personY - 2 * (25 + shiftW));
@@ -221,7 +221,7 @@ namespace auTree
             relative[relativeNum].BackColor = Color.White;
             this.Controls.Add(relative[relativeNum]);
 
-            drawLine(relative[relativeNum].Location.X, relative[relativeNum].Location.Y);
+            drawLines(relative[relativeNum].Location.X, relative[relativeNum].Location.Y, "Line");
 
             FrontOrBack(kit);
         }
@@ -236,7 +236,7 @@ namespace auTree
             relative[relativeNum].BackColor = Color.White;
             this.Controls.Add(relative[relativeNum]);
 
-            drawLine(relative[relativeNum].Location.X, relative[relativeNum].Location.Y);
+            drawLines(relative[relativeNum].Location.X, relative[relativeNum].Location.Y, "Line");
 
             FrontOrBack(kit);
         }
@@ -251,7 +251,7 @@ namespace auTree
             relative[relativeNum].BackColor = Color.White;
             this.Controls.Add(relative[relativeNum]);
 
-            drawLine(relative[relativeNum].Location.X, relative[relativeNum].Location.Y);
+            drawLines(relative[relativeNum].Location.X, relative[relativeNum].Location.Y, "Line");
 
             FrontOrBack(kit);
         }
@@ -267,14 +267,14 @@ namespace auTree
             relative[relativeNum].BackColor = Color.White;
             this.Controls.Add(relative[relativeNum]);
 
-            drawLine(relative[relativeNum].Location.X, relative[relativeNum].Location.Y);
+            drawLines(relative[relativeNum].Location.X, relative[relativeNum].Location.Y, "Line");
 
             FrontOrBack(kit);
         }
 
         void drawGreatgranduncle(double kit)
         {
-            drawLineGGGFtoGGU();
+            drawLines(0, 0, "GGGFtoGGU");
 
             relative[relativeNum] = new Label();
             relative[relativeNum].Location = new Point(personX + 4 * (25 + shiftH), personY - 3 * (25 + shiftW));
@@ -284,7 +284,7 @@ namespace auTree
             relative[relativeNum].BackColor = Color.White;
             this.Controls.Add(relative[relativeNum]);
 
-            drawLine(relative[relativeNum].Location.X, relative[relativeNum].Location.Y);
+            drawLines(relative[relativeNum].Location.X, relative[relativeNum].Location.Y, "Line");
 
             FrontOrBack(kit);
         }
@@ -299,7 +299,7 @@ namespace auTree
             relative[relativeNum].BackColor = Color.White;
             this.Controls.Add(relative[relativeNum]);
 
-            drawLine(relative[relativeNum].Location.X, relative[relativeNum].Location.Y);
+            drawLines(relative[relativeNum].Location.X, relative[relativeNum].Location.Y, "Line");
 
             FrontOrBack(kit);
         }
@@ -315,14 +315,14 @@ namespace auTree
             relative[relativeNum].BackColor = Color.White;
             this.Controls.Add(relative[relativeNum]);
 
-            drawLine(relative[relativeNum].Location.X, relative[relativeNum].Location.Y);
+            drawLines(relative[relativeNum].Location.X, relative[relativeNum].Location.Y, "Line");
 
             FrontOrBack(kit);
         }
 
         void drawGreatgreatgranduncle(double kit)
         {
-            drawLineGGGGFtoGGGU();
+            drawLines(0, 0, "GGGGFtoGGGU");
 
             relative[relativeNum] = new Label();
             relative[relativeNum].Location = new Point(personX + 5 * (25 + shiftH), personY - 4 * (25 + shiftW));
@@ -332,7 +332,7 @@ namespace auTree
             relative[relativeNum].BackColor = Color.White;
             this.Controls.Add(relative[relativeNum]);
 
-            drawLine(relative[relativeNum].Location.X, relative[relativeNum].Location.Y);
+            drawLines(relative[relativeNum].Location.X, relative[relativeNum].Location.Y, "Line");
 
             FrontOrBack(kit);
         }
@@ -348,7 +348,7 @@ namespace auTree
             relative[relativeNum].BackColor = Color.White;
             this.Controls.Add(relative[relativeNum]);
 
-            drawLine(relative[relativeNum].Location.X, relative[relativeNum].Location.Y);
+            drawLines(relative[relativeNum].Location.X, relative[relativeNum].Location.Y, "Line");
 
             FrontOrBack(kit);
         }
