@@ -53,7 +53,7 @@ namespace auTree
                 }
             }
 
-            drawSelf(kitNumb[0]);
+            drawGen(kitNumb[0], "Self");
 
             for (int j = 0; j < genDist.GetLength(0); j++)
             {

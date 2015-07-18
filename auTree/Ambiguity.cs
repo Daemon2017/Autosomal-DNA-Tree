@@ -34,7 +34,7 @@ namespace auTree
                     }
                     else
                     {
-                        drawChild(kitNumb[j]);
+                        drawGen(kitNumb[j], "Child");
                     }
                     break;
 
