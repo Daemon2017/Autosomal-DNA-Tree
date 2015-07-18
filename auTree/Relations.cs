@@ -70,12 +70,12 @@ namespace auTree
 
                 if (genDist[selfNum, j] >= num[2, 0] && genDist[selfNum, j] <= num[2, 1])
                 {
-                    Amb1stC2ROr2ndC(j, genDist);
+                    ambiguity(j, genDist, "1stC2ROr2ndC");
                 }
 
                 if (genDist[selfNum, j] >= num[3, 0] && genDist[selfNum, j] <= num[3, 1])
                 {
-                    Amb2ndC1ROr3rdC(j, genDist);
+                    ambiguity(j, genDist, "2ndC1ROr3rdC");
                 }
 
                 if (genDist[selfNum, j] >= num[4, 0] && genDist[selfNum, j] <= num[4, 1])
@@ -86,12 +86,12 @@ namespace auTree
                 //Поколение -1
                 if (genDist[selfNum, j] >= num[5, 0] && genDist[selfNum, j] <= num[5, 1])
                 {
-                    ChildOrParent(j, genDist);
+                    ambiguity(j, genDist, "ChildOrParent");
                 }
 
                 if (genDist[selfNum, j] >= num[6, 0] && genDist[selfNum, j] <= num[6, 1])
                 {
-                    UncleOrGF(j, genDist);
+                    ambiguity(j, genDist, "UncleOrGF");
                 }
 
                 if (genDist[selfNum, j] >= num[7, 0] && genDist[selfNum, j] <= num[7, 1])
@@ -101,7 +101,7 @@ namespace auTree
 
                 if (genDist[selfNum, j] >= num[8, 0] && genDist[selfNum, j] <= num[8, 1])
                 {
-                    Amb2ndC1ROr3rdC(j, genDist);
+                    ambiguity(j, genDist, "2ndC1ROr3rdC");
                 }
 
                 if (genDist[selfNum, j] >= num[9, 0] && genDist[selfNum, j] <= num[9, 1])
@@ -112,7 +112,7 @@ namespace auTree
                 //Поколение -2
                 if (genDist[selfNum, j] >= num[10, 0] && genDist[selfNum, j] <= num[10, 1])
                 {
-                    UncleOrGF(j, genDist);
+                    ambiguity(j, genDist, "UncleOrGF");
                 }
 
                 if (genDist[selfNum, j] >= num[11, 0] && genDist[selfNum, j] <= num[11, 1])
@@ -122,7 +122,7 @@ namespace auTree
 
                 if (genDist[selfNum, j] >= num[12, 0] && genDist[selfNum, j] <= num[12, 1])
                 {
-                    Amb1stC2ROr2ndC(j, genDist);
+                    ambiguity(j, genDist, "1stC2ROr2ndC");
                 }
 
                 if (genDist[selfNum, j] >= num[13, 0] && genDist[selfNum, j] <= num[13, 1])

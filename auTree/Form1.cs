@@ -22,7 +22,7 @@ namespace auTree
         private void startToolStripMenuItem_Click(object sender, EventArgs e)
         {
             //Relations.cs - содержит интервалы, указывающие на то, какого уровня родство отрисовывать
-            relationsBuild(); 
+            relationsBuild();
         }
 
         private void relationsOptionsToolStripMenuItem_Click(object sender, EventArgs e)
