@@ -15,20 +15,17 @@ namespace auTree
         //Неоднозначности
         void ChildOrParent(int j, double[,] genDist)
         {
-            double father = 0;
-            double halfTotal = genDist.GetLength(0) / 2;
+            double[] compare = new double[genDist.GetLength(0)];
+            double result;
 
             for (int i = 0; i < genDist.GetLength(0); i++)
             {
-                double compare = genDist[selfNum, i] - genDist[j, i];
-
-                if (compare > 0)
-                {
-                    father++;
-                }
+                compare[i] = genDist[selfNum, i] - genDist[j, i];
             }
 
-            if (father > halfTotal)
+            result = compare.Average();
+
+            if (result >= 0)
             {
                 FLine(0, kitNumb[j]);
             }
