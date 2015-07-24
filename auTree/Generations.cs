@@ -36,6 +36,7 @@ namespace auTree
                     break;
 
                 case "Brother":
+                    drawLines(0, 0, "FtoB");
                     relative[relativeNum].Location = new Point(personX + (25 + shiftH), personY);
                     break;
 
