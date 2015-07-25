@@ -31,5 +31,18 @@ namespace auTree
             RelationsOptions RO = new RelationsOptions();
             RO.Show();
         }
+
+        private void ambiguityOptionsToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            //AmbiguityOptions.cs - конфигурирование границ неопределенностей
+            AmbiguityOptions AO = new AmbiguityOptions();
+            AO.Show();
+        }
+
+        private void оПрограммеToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            AboutBox1 About = new AboutBox1();
+            About.Show();            
+        }
     }
 }

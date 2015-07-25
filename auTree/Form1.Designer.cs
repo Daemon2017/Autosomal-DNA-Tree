@@ -34,6 +34,7 @@
             this.optionsToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.relationsOptionsToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.ambiguityOptionsToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.оПрограммеToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.menuStrip1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -42,7 +43,8 @@
             this.menuStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.startToolStripMenuItem,
             this.saveTreeJPGToolStripMenuItem,
-            this.optionsToolStripMenuItem});
+            this.optionsToolStripMenuItem,
+            this.оПрограммеToolStripMenuItem});
             this.menuStrip1.Location = new System.Drawing.Point(0, 0);
             this.menuStrip1.Name = "menuStrip1";
             this.menuStrip1.Size = new System.Drawing.Size(1264, 24);
@@ -83,6 +85,14 @@
             this.ambiguityOptionsToolStripMenuItem.Name = "ambiguityOptionsToolStripMenuItem";
             this.ambiguityOptionsToolStripMenuItem.Size = new System.Drawing.Size(247, 22);
             this.ambiguityOptionsToolStripMenuItem.Text = "Настройки неопределенностей";
+            this.ambiguityOptionsToolStripMenuItem.Click += new System.EventHandler(this.ambiguityOptionsToolStripMenuItem_Click);
+            // 
+            // оПрограммеToolStripMenuItem
+            // 
+            this.оПрограммеToolStripMenuItem.Name = "оПрограммеToolStripMenuItem";
+            this.оПрограммеToolStripMenuItem.Size = new System.Drawing.Size(94, 20);
+            this.оПрограммеToolStripMenuItem.Text = "О программе";
+            this.оПрограммеToolStripMenuItem.Click += new System.EventHandler(this.оПрограммеToolStripMenuItem_Click);
             // 
             // Form1
             // 
@@ -109,6 +119,7 @@
         private System.Windows.Forms.ToolStripMenuItem relationsOptionsToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem ambiguityOptionsToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem saveTreeJPGToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem оПрограммеToolStripMenuItem;
 
     }
 }
