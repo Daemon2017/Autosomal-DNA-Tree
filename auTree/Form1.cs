@@ -12,6 +12,12 @@ namespace auTree
 {
     public partial class Form1 : Form
     {
+        RelationsOptions RO = new RelationsOptions();
+        AmbiguityOptions AO = new AmbiguityOptions();
+        AboutBox1 About = new AboutBox1();
+
+        bool useAmbiguitySolver;
+
         public Form1()
         {
             InitializeComponent();
@@ -26,19 +32,21 @@ namespace auTree
 
         private void relationsOptionsToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            RelationsOptions RO = new RelationsOptions();
             RO.Show();
         }
 
         private void ambiguityOptionsToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            AmbiguityOptions AO = new AmbiguityOptions();
+            //Загрузка значения Да/Нет, позволяющего пытаться решить неопределенности
+            AO.button1.Click += (senderSlave, eSlave) =>
+            {
+                this.useAmbiguitySolver = AO.useAmbiguitySolver;
+            };
             AO.Show();
         }
 
         private void оПрограммеToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            AboutBox1 About = new AboutBox1();
             About.Show();            
         }
     }

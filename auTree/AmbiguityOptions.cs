@@ -13,8 +13,9 @@ namespace auTree
 {
     public partial class AmbiguityOptions : Form
     {
-        public TextBox[] ambiguityDistance = new TextBox[5];
-        public string[] masDis = new String[5];
+        TextBox[] ambiguityDistance = new TextBox[5];
+        string[] masDis = new String[5];
+        public bool useAmbiguitySolver;
 
         public AmbiguityOptions()
         {
@@ -28,6 +29,7 @@ namespace auTree
                 masDis[j] = ambiguityDistance[j].Text;
             }
             saveMatrix();
+            useAmbiguitySolver = checkBox1.Checked;
             Close();
         }
 
