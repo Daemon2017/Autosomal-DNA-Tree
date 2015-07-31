@@ -14,15 +14,12 @@ namespace auTree
     public partial class Form1
     {
         int[] kitNumb = new int[30];
+        double[] edge = new double[5];
 
         void relationsBuild()
         {
             //Загрузка номеров китов
-            string[] kitLines = File.ReadAllLines("KitsNumbers.txt");
-            for (int i = 0; i < kitLines.Length; i++)
-            {
-                if (Int32.TryParse(kitLines[i], out kitNumb[i])) ;
-            }
+            loadKitNumbers();
 
             //Загрузка матрицы родовых расстояний
             string[] genLines = File.ReadAllLines("GeneticDistances.txt");
@@ -30,7 +27,6 @@ namespace auTree
             for (int i = 0; i < genLines.Length; i++)
             {
                 string[] genTemp = genLines[i].Split(';');
-
                 for (int j = 0; j < genTemp.Length; j++)
                 {
                     if (Double.TryParse(genTemp[j], out genDist[i, j])) ;
@@ -43,15 +39,19 @@ namespace auTree
             for (int i = 0; i < lines.Length; i++)
             {
                 string[] temp = lines[i].Split(';');
-
                 for (int j = 0; j < temp.Length; j++)
                 {
                     if (Double.TryParse(temp[j], out num[i, j])) ;
                 }
             }
 
+            //Загрузка граничного значения неопределенностей
+            loadAmbiguityEdges();
+
+            //Отрисовка собственной персоны
             drawGen(kitNumb[0], "Self");
 
+            //Отрисовка родственных персон
             for (int j = 0; j < genDist.GetLength(0); j++)
             {
                 //Line Father
@@ -68,6 +68,24 @@ namespace auTree
 
                 //Line Great-great-great-grand-father
                 LineGreatgreatgreatgrandfather(j, genDist, num);
+            }
+        }
+
+        void loadKitNumbers()
+        {
+            string[] kitLines = File.ReadAllLines("KitsNumbers.txt");
+            for (int i = 0; i < kitLines.Length; i++)
+            {
+                if (Int32.TryParse(kitLines[i], out kitNumb[i])) ;
+            }
+        }
+
+        void loadAmbiguityEdges()
+        {
+            string[] ambiguityEdge = File.ReadAllLines("AmbiguityOptions.cfg");
+            for (int i = 0; i < ambiguityEdge.Length; i++)
+            {
+                if (Double.TryParse(ambiguityEdge[i], out edge[i])) ;
             }
         }
 

@@ -27,16 +27,13 @@ namespace auTree
             {
                 masDis[j] = ambiguityDistance[j].Text;
             }
-
             saveMatrix();
-
             Close();
         }
 
         private void AmbiguityOptions_Load(object sender, EventArgs e)
         {
             drawTextBoxes();
-
             loadMatrix();
         }
 
@@ -46,7 +43,7 @@ namespace auTree
             {
                 ambiguityDistance[i] = new TextBox();
                 ambiguityDistance[i].Location = new Point(148, 25 + i * 26);
-                ambiguityDistance[i].Size = new System.Drawing.Size(24, 20);
+                ambiguityDistance[i].Size = new System.Drawing.Size(34, 20);
                 this.Controls.Add(ambiguityDistance[i]);
             }
         }

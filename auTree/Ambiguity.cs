@@ -28,7 +28,7 @@ namespace auTree
             switch (selectRelation)
             {
                 case "ChildOrParent":
-                    if (result >= 0)
+                    if (result >= edge[0])
                     {
                         FLine(0, kitNumb[j]);
                     }
@@ -39,7 +39,7 @@ namespace auTree
                     break;
 
                 case "UncleOrGF":
-                    if (Math.Abs(result) >= 0.45)
+                    if (Math.Abs(result) >= edge[1])
                     {
                         GFLine(0, kitNumb[j]);
                     }
@@ -50,7 +50,7 @@ namespace auTree
                     break;
 
                 case "1stC2ROr2ndC":
-                    if (Math.Abs(result) >= 0.45)
+                    if (Math.Abs(result) >= edge[2])
                     {
                         GGFLine(3, kitNumb[j]);
                     }
@@ -61,7 +61,7 @@ namespace auTree
                     break;
 
                 case "2ndC1ROr3rdC":
-                    if (Math.Abs(result) >= 0.17)
+                    if (Math.Abs(result) >= edge[3])
                     {
                         GGGFLine(4, kitNumb[j]);
                     }

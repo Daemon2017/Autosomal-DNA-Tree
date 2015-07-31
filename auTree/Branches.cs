@@ -12,7 +12,7 @@ namespace auTree
 {
     public partial class Form1
     {
-        //Ветвление
+        //Ветвь от прапрапрадеда
         void GGGGFLine(int depth, double kit)
         {
             double currentKit = kit;
@@ -83,6 +83,7 @@ namespace auTree
             }
         }
 
+        //Ветвь от прапрадеда
         void GGGFLine(int depth, double kit)
         {
             double currentKit = kit;
@@ -142,6 +143,7 @@ namespace auTree
             }
         }
 
+        //Ветвь от прадеда
         void GGFLine(int depth, double kit)
         {
             double currentKit = kit;
@@ -190,6 +192,7 @@ namespace auTree
             }
         }
 
+        //Ветвь от деда
         void GFLine(int depth, double kit)
         {
             double currentKit = kit;
@@ -227,6 +230,7 @@ namespace auTree
             }
         }
 
+        //Ветвь от отца
         void FLine(int depth, double kit)
         {
             double currentKit = kit;

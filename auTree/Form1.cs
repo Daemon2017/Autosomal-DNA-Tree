@@ -21,20 +21,17 @@ namespace auTree
 
         private void startToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            //Relations.cs - содержит интервалы, указывающие на то, какого уровня родство отрисовывать
             relationsBuild();
         }
 
         private void relationsOptionsToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            //RelationsOptions.cs - конфигурирование интервалов родства
             RelationsOptions RO = new RelationsOptions();
             RO.Show();
         }
 
         private void ambiguityOptionsToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            //AmbiguityOptions.cs - конфигурирование границ неопределенностей
             AmbiguityOptions AO = new AmbiguityOptions();
             AO.Show();
         }
