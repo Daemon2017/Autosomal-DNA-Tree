@@ -93,7 +93,14 @@ namespace auTree
         {
             if (genDist[selfNum, j] >= num[5, 0] && genDist[selfNum, j] <= num[5, 1])
             {
-                ambiguity(j, genDist, "ChildOrParent"); //Father
+                if (useAmbiguitySolver == true)
+                {
+                    ambiguity(j, genDist, "ChildOrParent"); //Father
+                }
+                else
+                {
+                    FLine(0, kitNumb[j]);
+                }
             }
             if (genDist[selfNum, j] >= num[0, 0] && genDist[selfNum, j] <= num[0, 1])
             {
@@ -105,11 +112,25 @@ namespace auTree
         {
             if (genDist[selfNum, j] >= num[10, 0] && genDist[selfNum, j] <= num[10, 1])
             {
-                ambiguity(j, genDist, "UncleOrGF"); //Grand-father
+                if (useAmbiguitySolver == true)
+                {
+                    ambiguity(j, genDist, "UncleOrGF"); //Grand-father
+                }
+                else
+                {
+                    GFLine(0, kitNumb[j]);
+                }
             }
             if (genDist[selfNum, j] >= num[6, 0] && genDist[selfNum, j] <= num[6, 1])
             {
-                ambiguity(j, genDist, "UncleOrGF"); //Uncle
+                if (useAmbiguitySolver == true)
+                {
+                    ambiguity(j, genDist, "UncleOrGF"); //Uncle
+                }
+                else
+                {
+                    GFLine(1, kitNumb[j]);
+                }
             }
             if (genDist[selfNum, j] >= num[1, 0] && genDist[selfNum, j] <= num[1, 1])
             {
@@ -133,7 +154,14 @@ namespace auTree
             }
             if (genDist[selfNum, j] >= num[2, 0] && genDist[selfNum, j] <= num[2, 1])
             {
-                ambiguity(j, genDist, "1stC2ROr2ndC"); //2nd Cousin
+                if (useAmbiguitySolver == true)
+                {
+                    ambiguity(j, genDist, "1stC2ROr2ndC"); //2nd Cousin
+                }
+                else
+                {
+                    GGFLine(3, kitNumb[j]);
+                }
             }
         }
 
@@ -149,15 +177,36 @@ namespace auTree
             }
             if (genDist[selfNum, j] >= num[12, 0] && genDist[selfNum, j] <= num[12, 1])
             {
-                ambiguity(j, genDist, "1stC2ROr2ndC"); //1st Cousin 2R
+                if (useAmbiguitySolver == true)
+                {
+                    ambiguity(j, genDist, "1stC2ROr2ndC"); //1st Cousin 2R
+                }
+                else
+                {
+                    GGGFLine(2, kitNumb[j]);
+                }
             }
             if (genDist[selfNum, j] >= num[8, 0] && genDist[selfNum, j] <= num[8, 1])
             {
-                ambiguity(j, genDist, "2ndC1ROr3rdC"); //2nd Cousin 1R
+                if (useAmbiguitySolver == true)
+                {
+                    ambiguity(j, genDist, "2ndC1ROr3rdC"); //2nd Cousin 1R
+                }
+                else
+                {
+                    GGGFLine(3, kitNumb[j]);
+                }
             }
             if (genDist[selfNum, j] >= num[3, 0] && genDist[selfNum, j] <= num[3, 1])
             {
-                ambiguity(j, genDist, "2ndC1ROr3rdC"); //3rd Cousin
+                if (useAmbiguitySolver == true)
+                {
+                    ambiguity(j, genDist, "2ndC1ROr3rdC"); //3rd Cousin
+                }
+                else
+                {
+                    GGGFLine(4, kitNumb[j]);
+                }
             }
         }
 
