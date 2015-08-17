@@ -13,6 +13,7 @@ namespace auTree
 {
     public partial class RelationsOptions : Form
     {
+        //Массивы текстовых полей по поколениям
         public TextBox[] min0 = new TextBox[5];
         public TextBox[] max0 = new TextBox[5];
         public TextBox[] minM1 = new TextBox[5];
@@ -27,7 +28,8 @@ namespace auTree
         public TextBox[] maxM5 = new TextBox[1];
         public TextBox[] minP1 = new TextBox[1];
         public TextBox[] maxP1 = new TextBox[1];
-
+        
+        //Массив со значениями интервалов для всех поколений (в момент перед сохранением)
         public string[,] mass = new String[21, 2];
 
         public RelationsOptions()
@@ -37,7 +39,10 @@ namespace auTree
 
         private void RelationsOptions_Load(object sender, EventArgs e)
         {
+            //Отрисовка ячеек с персонами
             drawTextBoxes();
+
+            //Загрузка нижних и верхних границ интервалов для каждого возможного родства
             loadMatrix();
         }
 
@@ -85,14 +90,15 @@ namespace auTree
                 mass[j, 1] = maxP1[j - 20].Text;
             }
 
+            //Сохранение нижних и верхних границ интервалов для каждого возможного родства
             saveMatrix();
 
             Close();
         }
 
+        //Загрузка нижних и верхних границ интервалов для каждого возможного родства
         void loadMatrix()
         {
-            //Загрузка нижних и верхних границ интервалов для каждого возможного родства
             string[] lines = File.ReadAllLines("RelationsOptions.cfg");
             string[,] relationsData = new string[lines.Length, lines[0].Split(';').Length];
             for (int i = 0; i < lines.Length; i++)
@@ -154,6 +160,7 @@ namespace auTree
             }
         }
 
+        //Отрисовка ячеек с персонами
         void drawTextBoxes()
         {
             //Поколение 0

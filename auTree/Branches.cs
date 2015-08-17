@@ -28,6 +28,7 @@ namespace auTree
                 {
                     currentKit = 0;
                 }
+
                 drawGen(currentKit, "Greatgreatgreatgrandfather");
                 currentKit = kit;
             }
@@ -38,6 +39,7 @@ namespace auTree
                 {
                     currentKit = 0;
                 }
+
                 drawGen(currentKit, "Greatgreatgranduncle");
                 currentKit = kit;
             }
@@ -48,6 +50,7 @@ namespace auTree
                 {
                     currentKit = 0;
                 }
+
                 drawGen(currentKit, "1stCousin3R");
                 currentKit = kit;
             }
@@ -58,6 +61,7 @@ namespace auTree
                 {
                     currentKit = 0;
                 }
+
                 drawGen(currentKit, "2ndCousin2R");
                 currentKit = kit;
             }
@@ -68,6 +72,7 @@ namespace auTree
                 {
                     currentKit = 0;
                 }
+
                 drawGen(currentKit, "3rdCousin1R");
                 currentKit = kit;
             }
@@ -78,6 +83,7 @@ namespace auTree
                 {
                     currentKit = 0;
                 }
+
                 drawGen(currentKit, "4thCousin");
                 currentKit = kit;
             }
@@ -98,6 +104,7 @@ namespace auTree
                 {
                     currentKit = 0;
                 }
+
                 drawGen(currentKit, "Greatgreatgrandfather");
                 currentKit = kit;
             }
@@ -118,6 +125,7 @@ namespace auTree
                 {
                     currentKit = 0;
                 }
+
                 drawGen(currentKit, "1stCousin2R");
                 currentKit = kit;
             }
@@ -128,6 +136,7 @@ namespace auTree
                 {
                     currentKit = 0;
                 }
+
                 drawGen(currentKit, "2ndCousin1R");
                 currentKit = kit;
             }
@@ -138,6 +147,7 @@ namespace auTree
                 {
                     currentKit = 0;
                 }
+
                 drawGen(currentKit, "3rdCousin");
                 currentKit = kit;
             }
@@ -157,6 +167,7 @@ namespace auTree
                 {
                     currentKit = 0;
                 }
+
                 drawGen(currentKit, "Greatgrandfather");
                 currentKit = kit;
             }
@@ -167,6 +178,7 @@ namespace auTree
                 {
                     currentKit = 0;
                 }
+
                 drawGen(currentKit, "Granduncle");
                 currentKit = kit;
             }
@@ -177,6 +189,7 @@ namespace auTree
                 {
                     currentKit = 0;
                 }
+
                 drawGen(currentKit, "1stCousin1R");
                 currentKit = kit;
             }
@@ -187,6 +200,7 @@ namespace auTree
                 {
                     currentKit = 0;
                 }
+
                 drawGen(currentKit, "2ndCousin");
                 currentKit = kit;
             }
@@ -205,6 +219,7 @@ namespace auTree
                 {
                     currentKit = 0;
                 }
+
                 drawGen(currentKit, "Grandfather");
                 currentKit = kit;
             }
@@ -215,6 +230,7 @@ namespace auTree
                 {
                     currentKit = 0;
                 }
+
                 drawGen(currentKit, "Uncle");
                 currentKit = kit;
             }
@@ -225,6 +241,7 @@ namespace auTree
                 {
                     currentKit = 0;
                 }
+
                 drawGen(currentKit, "1stCousin");
                 currentKit = kit;
             }
@@ -241,6 +258,7 @@ namespace auTree
                 {
                     currentKit = 0;
                 }
+
                 drawGen(currentKit, "Father");
                 currentKit = kit;
             }
@@ -251,6 +269,7 @@ namespace auTree
                 {
                     currentKit = 0;
                 }
+
                 drawGen(currentKit, "Brother");
                 currentKit = kit;
             }

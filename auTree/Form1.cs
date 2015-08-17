@@ -16,6 +16,7 @@ namespace auTree
         AmbiguityOptions AO = new AmbiguityOptions();
         AboutBox1 About = new AboutBox1();
 
+        //Переменная, разрешающая/запрещающая пытаться решить неопределенности
         bool useAmbiguitySolver;
 
         public Form1()
@@ -27,6 +28,7 @@ namespace auTree
 
         private void startToolStripMenuItem_Click(object sender, EventArgs e)
         {
+            //Запуск загрузки информации и отрисовки персон
             relationsBuild();
         }
 
@@ -37,7 +39,7 @@ namespace auTree
 
         private void ambiguityOptionsToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            //Загрузка значения Да/Нет, позволяющего пытаться решить неопределенности
+            //Загрузка значения, позволяющего/запрещающего пытаться решить неопределенности
             AO.button1.Click += (senderSlave, eSlave) =>
             {
                 this.useAmbiguitySolver = AO.useAmbiguitySolver;

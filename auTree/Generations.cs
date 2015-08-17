@@ -21,6 +21,7 @@ namespace auTree
 
         public Label[] relative;
 
+        //Отрисовка персоны
         void drawGen(double kit, string selectGen)
         {
             relative[relativeNum] = new Label();
@@ -129,9 +130,11 @@ namespace auTree
 
             drawLines(relative[relativeNum].Location.X, relative[relativeNum].Location.Y, "Line");
 
+            //Помещать ячейку с персоной на передний или задний план
             FrontOrBack(kit);
         }
 
+        //Помещать ячейку с персоной на передний или задний план
         void FrontOrBack(double kit)
         {
             if (kit != 0)
