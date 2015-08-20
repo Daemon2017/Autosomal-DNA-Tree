@@ -12,9 +12,24 @@ namespace auTree
 {
     public partial class Form1
     {
+        int FL1 = 0; //Количество ветвей, идущих от отца
+        int GFL2 = 0; //Количество ветвей, идущих от деда
+        int GGFL3 = 0; //Количество ветвей, идущих от прадеда
+        int GGGFL4 = 0; //Количество ветвей, идущих от прапрадеда
+        int GGGGFL5 = 0; //Количество ветвей, идущих от прапрапрадеда
+        int SummOfLines = 0; //Общее количество ветвей на текущую итерацию
+
+        //Подсчет общего количества ветвей на текущую итерацию
+        void SummOfLinesCalc()
+        {
+            SummOfLines = FL1 + GFL2 + GGFL3 + GGGFL4 + GGGGFL5;
+        }
+
         //Ветвь от прапрапрадеда
         void GGGGFLine(int depth, double kit)
         {
+            GGGGFL5++;
+
             double currentKit = kit;
 
             drawGen(0, "Father");
@@ -92,6 +107,8 @@ namespace auTree
         //Ветвь от прапрадеда
         void GGGFLine(int depth, double kit)
         {
+            GGGFL4++;
+
             double currentKit = kit;
 
             drawGen(0, "Father");
@@ -115,6 +132,7 @@ namespace auTree
                 {
                     currentKit = 0;
                 }
+
                 drawGen(currentKit, "Greatgranduncle");
                 currentKit = kit;
             }
@@ -156,6 +174,8 @@ namespace auTree
         //Ветвь от прадеда
         void GGFLine(int depth, double kit)
         {
+            GGFL3++;
+
             double currentKit = kit;
 
             drawGen(0, "Father");
@@ -209,6 +229,8 @@ namespace auTree
         //Ветвь от деда
         void GFLine(int depth, double kit)
         {
+            GFL2++;
+
             double currentKit = kit;
 
             drawGen(0, "Father");
@@ -250,6 +272,8 @@ namespace auTree
         //Ветвь от отца
         void FLine(int depth, double kit)
         {
+            FL1++;
+
             double currentKit = kit;
 
             if (depth >= 0)
@@ -269,7 +293,7 @@ namespace auTree
                 {
                     currentKit = 0;
                 }
-
+                                
                 drawGen(currentKit, "Brother");
                 currentKit = kit;
             }

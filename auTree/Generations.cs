@@ -29,7 +29,8 @@ namespace auTree
             switch (selectGen)
             {
                 case "Child":
-                    relative[relativeNum].Location = new Point(personX, personY + (25 + shiftW));
+                    SummOfLinesCalc();
+                    relative[relativeNum].Location = new Point(personX, personY + 1 * (25 + shiftW));
                     break;
 
                 case "Self":
@@ -37,45 +38,54 @@ namespace auTree
                     break;
 
                 case "Brother":
+                    SummOfLinesCalc();
                     drawLines(0, 0, "FtoB");
-                    relative[relativeNum].Location = new Point(personX + (25 + shiftH), personY);
+                    relative[relativeNum].Location = new Point(personX + SummOfLines * (25 + shiftH), personY);
                     break;
 
                 case "1stCousin":
-                    relative[relativeNum].Location = new Point(personX + 2 * (25 + shiftH), personY);
+                    SummOfLinesCalc();
+                    relative[relativeNum].Location = new Point(personX + SummOfLines * (25 + shiftH), personY);
                     break;
 
                 case "2ndCousin":
-                    relative[relativeNum].Location = new Point(personX + 3 * (25 + shiftH), personY);
+                    SummOfLinesCalc();
+                    relative[relativeNum].Location = new Point(personX + SummOfLines * (25 + shiftH), personY);
                     break;
 
                 case "3rdCousin":
-                    relative[relativeNum].Location = new Point(personX + 4 * (25 + shiftH), personY);
+                    SummOfLinesCalc();
+                    relative[relativeNum].Location = new Point(personX + SummOfLines * (25 + shiftH), personY);
                     break;
 
                 case "4thCousin":
-                    relative[relativeNum].Location = new Point(personX + 5 * (25 + shiftH), personY);
+                    SummOfLinesCalc();
+                    relative[relativeNum].Location = new Point(personX + SummOfLines * (25 + shiftH), personY);
                     break;
 
                 case "Father":
-                    relative[relativeNum].Location = new Point(personX, personY - (25 + shiftW));
+                    relative[relativeNum].Location = new Point(personX, personY - 1 * (25 + shiftW));
                     break;
 
                 case "Uncle":
+                    SummOfLinesCalc();
                     drawLines(0, 0, "GFtoU");
-                    relative[relativeNum].Location = new Point(personX + 2 * (25 + shiftH), personY - (25 + shiftW));
+                    relative[relativeNum].Location = new Point(personX + SummOfLines * (25 + shiftH), personY - 1 * (25 + shiftW));
                     break;
 
                 case "1stCousin1R":
-                    relative[relativeNum].Location = new Point(personX + 3 * (25 + shiftH), personY - (25 + shiftW));
+                    SummOfLinesCalc();
+                    relative[relativeNum].Location = new Point(personX + SummOfLines * (25 + shiftH), personY - 1 * (25 + shiftW));
                     break;
 
                 case "2ndCousin1R":
-                    relative[relativeNum].Location = new Point(personX + 4 * (25 + shiftH), personY - (25 + shiftW));
+                    SummOfLinesCalc();
+                    relative[relativeNum].Location = new Point(personX + SummOfLines * (25 + shiftH), personY - 1 * (25 + shiftW));
                     break;
 
                 case "3rdCousin1R":
-                    relative[relativeNum].Location = new Point(personX + 5 * (25 + shiftH), personY - (25 + shiftW));
+                    SummOfLinesCalc();
+                    relative[relativeNum].Location = new Point(personX + SummOfLines * (25 + shiftH), personY - 1 * (25 + shiftW));
                     break;
 
                 case "Grandfather":
@@ -83,16 +93,19 @@ namespace auTree
                     break;
 
                 case "Granduncle":
+                    SummOfLinesCalc();
                     drawLines(0, 0, "GGFtoGU");
-                    relative[relativeNum].Location = new Point(personX + 3 * (25 + shiftH), personY - 2 * (25 + shiftW));
+                    relative[relativeNum].Location = new Point(personX + SummOfLines * (25 + shiftH), personY - 2 * (25 + shiftW));
                     break;
 
                 case "1stCousin2R":
-                    relative[relativeNum].Location = new Point(personX + 4 * (25 + shiftH), personY - 2 * (25 + shiftW));
+                    SummOfLinesCalc();
+                    relative[relativeNum].Location = new Point(personX + SummOfLines * (25 + shiftH), personY - 2 * (25 + shiftW));
                     break;
 
                 case "2ndCousin2R":
-                    relative[relativeNum].Location = new Point(personX + 5 * (25 + shiftH), personY - 2 * (25 + shiftW));
+                    SummOfLinesCalc();
+                    relative[relativeNum].Location = new Point(personX + SummOfLines * (25 + shiftH), personY - 2 * (25 + shiftW));
                     break;
 
                 case "Greatgrandfather":
@@ -100,12 +113,14 @@ namespace auTree
                     break;
 
                 case "Greatgranduncle":
+                    SummOfLinesCalc();
                     drawLines(0, 0, "GGGFtoGGU");
-                    relative[relativeNum].Location = new Point(personX + 4 * (25 + shiftH), personY - 3 * (25 + shiftW));
+                    relative[relativeNum].Location = new Point(personX + SummOfLines * (25 + shiftH), personY - 3 * (25 + shiftW));
                     break;
 
                 case "1stCousin3R":
-                    relative[relativeNum].Location = new Point(personX + 5 * (25 + shiftH), personY - 3 * (25 + shiftW));
+                    SummOfLinesCalc();
+                    relative[relativeNum].Location = new Point(personX + SummOfLines * (25 + shiftH), personY - 3 * (25 + shiftW));
                     break;
 
                 case "Greatgreatgrandfather":
@@ -113,8 +128,9 @@ namespace auTree
                     break;
 
                 case "Greatgreatgranduncle":
+                    SummOfLinesCalc();
                     drawLines(0, 0, "GGGGFtoGGGU");
-                    relative[relativeNum].Location = new Point(personX + 5 * (25 + shiftH), personY - 4 * (25 + shiftW));
+                    relative[relativeNum].Location = new Point(personX + SummOfLines * (25 + shiftH), personY - 4 * (25 + shiftW));
                     break;
 
                 case "Greatgreatgreatgrandfather":
