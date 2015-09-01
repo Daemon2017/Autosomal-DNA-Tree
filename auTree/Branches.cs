@@ -32,10 +32,7 @@ namespace auTree
 
             double currentKit = kit;
 
-            drawGen(0, "Father");
-            drawGen(0, "Grandfather");
-            drawGen(0, "Greatgrandfather");
-            drawGen(0, "Greatgreatgrandfather");
+            drawMainLineGen(4);
 
             if (depth >= 0)
             {
@@ -46,61 +43,61 @@ namespace auTree
 
                 drawGen(currentKit, "Greatgreatgreatgrandfather");
                 currentKit = kit;
-            }
 
-            if (depth >= 1)
-            {
-                if (depth != 1)
+                if (depth >= 1)
                 {
-                    currentKit = 0;
+                    if (depth != 1)
+                    {
+                        currentKit = 0;
+                    }
+
+                    drawGen(currentKit, "Greatgreatgranduncle");
+                    currentKit = kit;
+
+                    if (depth >= 2)
+                    {
+                        if (depth != 2)
+                        {
+                            currentKit = 0;
+                        }
+
+                        drawGen(currentKit, "1stCousin3R");
+                        currentKit = kit;
+
+                        if (depth >= 3)
+                        {
+                            if (depth != 3)
+                            {
+                                currentKit = 0;
+                            }
+
+                            drawGen(currentKit, "2ndCousin2R");
+                            currentKit = kit;
+
+                            if (depth >= 4)
+                            {
+                                if (depth != 4)
+                                {
+                                    currentKit = 0;
+                                }
+
+                                drawGen(currentKit, "3rdCousin1R");
+                                currentKit = kit;
+
+                                if (depth >= 5)
+                                {
+                                    if (depth != 5)
+                                    {
+                                        currentKit = 0;
+                                    }
+
+                                    drawGen(currentKit, "4thCousin");
+                                    currentKit = kit;
+                                }
+                            }
+                        }
+                    }
                 }
-
-                drawGen(currentKit, "Greatgreatgranduncle");
-                currentKit = kit;
-            }
-
-            if (depth >= 2)
-            {
-                if (depth != 2)
-                {
-                    currentKit = 0;
-                }
-
-                drawGen(currentKit, "1stCousin3R");
-                currentKit = kit;
-            }
-
-            if (depth >= 3)
-            {
-                if (depth != 3)
-                {
-                    currentKit = 0;
-                }
-
-                drawGen(currentKit, "2ndCousin2R");
-                currentKit = kit;
-            }
-
-            if (depth >= 4)
-            {
-                if (depth != 4)
-                {
-                    currentKit = 0;
-                }
-
-                drawGen(currentKit, "3rdCousin1R");
-                currentKit = kit;
-            }
-
-            if (depth >= 5)
-            {
-                if (depth != 5)
-                {
-                    currentKit = 0;
-                }
-
-                drawGen(currentKit, "4thCousin");
-                currentKit = kit;
             }
         }
 
@@ -111,9 +108,7 @@ namespace auTree
 
             double currentKit = kit;
 
-            drawGen(0, "Father");
-            drawGen(0, "Grandfather");
-            drawGen(0, "Greatgrandfather");
+            drawMainLineGen(3);
 
             if (depth >= 0)
             {
@@ -124,50 +119,50 @@ namespace auTree
 
                 drawGen(currentKit, "Greatgreatgrandfather");
                 currentKit = kit;
-            }
 
-            if (depth >= 1)
-            {
-                if (depth != 1)
+                if (depth >= 1)
                 {
-                    currentKit = 0;
+                    if (depth != 1)
+                    {
+                        currentKit = 0;
+                    }
+
+                    drawGen(currentKit, "Greatgranduncle");
+                    currentKit = kit;
+
+                    if (depth >= 2)
+                    {
+                        if (depth != 2)
+                        {
+                            currentKit = 0;
+                        }
+
+                        drawGen(currentKit, "1stCousin2R");
+                        currentKit = kit;
+
+                        if (depth >= 3)
+                        {
+                            if (depth != 3)
+                            {
+                                currentKit = 0;
+                            }
+
+                            drawGen(currentKit, "2ndCousin1R");
+                            currentKit = kit;
+
+                            if (depth >= 4)
+                            {
+                                if (depth != 4)
+                                {
+                                    currentKit = 0;
+                                }
+
+                                drawGen(currentKit, "3rdCousin");
+                                currentKit = kit;
+                            }
+                        }
+                    }
                 }
-
-                drawGen(currentKit, "Greatgranduncle");
-                currentKit = kit;
-            }
-
-            if (depth >= 2)
-            {
-                if (depth != 2)
-                {
-                    currentKit = 0;
-                }
-
-                drawGen(currentKit, "1stCousin2R");
-                currentKit = kit;
-            }
-
-            if (depth >= 3)
-            {
-                if (depth != 3)
-                {
-                    currentKit = 0;
-                }
-
-                drawGen(currentKit, "2ndCousin1R");
-                currentKit = kit;
-            }
-
-            if (depth >= 4)
-            {
-                if (depth != 4)
-                {
-                    currentKit = 0;
-                }
-
-                drawGen(currentKit, "3rdCousin");
-                currentKit = kit;
             }
         }
 
@@ -178,8 +173,7 @@ namespace auTree
 
             double currentKit = kit;
 
-            drawGen(0, "Father");
-            drawGen(0, "Grandfather");
+            drawMainLineGen(2);
 
             if (depth >= 0)
             {
@@ -190,39 +184,39 @@ namespace auTree
 
                 drawGen(currentKit, "Greatgrandfather");
                 currentKit = kit;
-            }
 
-            if (depth >= 1)
-            {
-                if (depth != 1)
+                if (depth >= 1)
                 {
-                    currentKit = 0;
+                    if (depth != 1)
+                    {
+                        currentKit = 0;
+                    }
+
+                    drawGen(currentKit, "Granduncle");
+                    currentKit = kit;
+
+                    if (depth >= 2)
+                    {
+                        if (depth != 2)
+                        {
+                            currentKit = 0;
+                        }
+
+                        drawGen(currentKit, "1stCousin1R");
+                        currentKit = kit;
+
+                        if (depth >= 3)
+                        {
+                            if (depth != 3)
+                            {
+                                currentKit = 0;
+                            }
+
+                            drawGen(currentKit, "2ndCousin");
+                            currentKit = kit;
+                        }
+                    }
                 }
-
-                drawGen(currentKit, "Granduncle");
-                currentKit = kit;
-            }
-
-            if (depth >= 2)
-            {
-                if (depth != 2)
-                {
-                    currentKit = 0;
-                }
-
-                drawGen(currentKit, "1stCousin1R");
-                currentKit = kit;
-            }
-
-            if (depth >= 3)
-            {
-                if (depth != 3)
-                {
-                    currentKit = 0;
-                }
-
-                drawGen(currentKit, "2ndCousin");
-                currentKit = kit;
             }
         }
 
@@ -233,7 +227,7 @@ namespace auTree
 
             double currentKit = kit;
 
-            drawGen(0, "Father");
+            drawMainLineGen(1);
 
             if (depth >= 0)
             {
@@ -244,28 +238,28 @@ namespace auTree
 
                 drawGen(currentKit, "Grandfather");
                 currentKit = kit;
-            }
 
-            if (depth >= 1)
-            {
-                if (depth != 1)
+                if (depth >= 1)
                 {
-                    currentKit = 0;
+                    if (depth != 1)
+                    {
+                        currentKit = 0;
+                    }
+
+                    drawGen(currentKit, "Uncle");
+                    currentKit = kit;
+
+                    if (depth >= 2)
+                    {
+                        if (depth != 2)
+                        {
+                            currentKit = 0;
+                        }
+
+                        drawGen(currentKit, "1stCousin");
+                        currentKit = kit;
+                    }
                 }
-
-                drawGen(currentKit, "Uncle");
-                currentKit = kit;
-            }
-
-            if (depth >= 2)
-            {
-                if (depth != 2)
-                {
-                    currentKit = 0;
-                }
-
-                drawGen(currentKit, "1stCousin");
-                currentKit = kit;
             }
         }
 
@@ -285,17 +279,40 @@ namespace auTree
 
                 drawGen(currentKit, "Father");
                 currentKit = kit;
-            }
 
-            if (depth >= 1)
-            {
-                if (depth != 1)
+                if (depth >= 1)
                 {
-                    currentKit = 0;
+                    if (depth != 1)
+                    {
+                        currentKit = 0;
+                    }
+
+                    drawGen(currentKit, "Brother");
+                    currentKit = kit;
                 }
-                                
-                drawGen(currentKit, "Brother");
-                currentKit = kit;
+            }
+        }
+
+        void drawMainLineGen(int mainLineDepth)
+        {
+            if (mainLineDepth == 1)
+            {
+                drawGen(0, "Father");
+
+                if (mainLineDepth == 2)
+                {
+                    drawGen(0, "Grandfather");
+
+                    if (mainLineDepth == 3)
+                    {
+                        drawGen(0, "Greatgrandfather");
+
+                        if (mainLineDepth == 4)
+                        {
+                            drawGen(0, "Greatgreatgrandfather");
+                        }
+                    }
+                }
             }
         }
     }
