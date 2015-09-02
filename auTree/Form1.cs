@@ -56,7 +56,7 @@ namespace auTree
 
         private void оПрограммеToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            About.Show();            
+            About.Show();
         }
     }
 }

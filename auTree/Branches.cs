@@ -40,6 +40,10 @@ namespace auTree
                 {
                     currentKit = 0;
                 }
+                else
+                {
+                    GGGGFL5--;
+                }
 
                 drawGen(currentKit, "Greatgreatgreatgrandfather");
                 currentKit = kit;
@@ -116,6 +120,10 @@ namespace auTree
                 {
                     currentKit = 0;
                 }
+                else
+                {
+                    GGGFL4--;
+                }
 
                 drawGen(currentKit, "Greatgreatgrandfather");
                 currentKit = kit;
@@ -181,6 +189,10 @@ namespace auTree
                 {
                     currentKit = 0;
                 }
+                else
+                {
+                    GGFL3--;
+                }
 
                 drawGen(currentKit, "Greatgrandfather");
                 currentKit = kit;
@@ -235,6 +247,10 @@ namespace auTree
                 {
                     currentKit = 0;
                 }
+                else
+                {
+                    GFL2--;
+                }
 
                 drawGen(currentKit, "Grandfather");
                 currentKit = kit;
@@ -277,6 +293,10 @@ namespace auTree
                 if (depth != 0)
                 {
                     currentKit = 0;
+                }
+                else
+                {
+                    FL1--;
                 }
 
                 drawGen(currentKit, "Father");
