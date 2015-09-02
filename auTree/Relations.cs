@@ -53,7 +53,7 @@ namespace auTree
             loadAmbiguityEdges();
 
             //Отрисовка собственной персоны
-            drawGen(kitNumb[0], "Self");
+            drawGen(kitNumb[selfNum], "Self");
 
             //Отрисовка родственных персон
             for (int j = 0; j < genDist.GetLength(0); j++)
