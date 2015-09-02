@@ -32,7 +32,7 @@ namespace auTree
 
             double currentKit = kit;
 
-            drawMainLineGen(4);
+            drawMainLineGen(5);
 
             if (depth >= 0)
             {
@@ -108,7 +108,7 @@ namespace auTree
 
             double currentKit = kit;
 
-            drawMainLineGen(3);
+            drawMainLineGen(4);
 
             if (depth >= 0)
             {
@@ -173,7 +173,7 @@ namespace auTree
 
             double currentKit = kit;
 
-            drawMainLineGen(2);
+            drawMainLineGen(3);
 
             if (depth >= 0)
             {
@@ -227,7 +227,7 @@ namespace auTree
 
             double currentKit = kit;
 
-            drawMainLineGen(1);
+            drawMainLineGen(2);
 
             if (depth >= 0)
             {
@@ -270,6 +270,8 @@ namespace auTree
 
             double currentKit = kit;
 
+            drawMainLineGen(1);
+
             if (depth >= 0)
             {
                 if (depth != 0)
@@ -310,6 +312,11 @@ namespace auTree
                         if (mainLineDepth == 4)
                         {
                             drawGen(0, "Greatgreatgrandfather");
+
+                            if (mainLineDepth == 5)
+                            {
+                                drawGen(0, "Greatgreatgreatgrandfather");
+                            }
                         }
                     }
                 }
